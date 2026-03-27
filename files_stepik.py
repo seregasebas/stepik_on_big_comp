@@ -1,13 +1,17 @@
-def longest_palindrome(filename: str) -> str:
-    res = ''
-    with open(filename, 'r') as f:
-        for word in f.read().split():
-            if word.lower() == word[::-1].lower():
-                if len(word) > len(res):
-                    res = word
-    return res
+print('Hello, chuvak!')
+print(25 * '-')
+'---------------------------------------------'
 
-print(longest_palindrome('test_2.txt'))
+# def longest_palindrome(filename: str) -> str:
+#     res = ''
+#     with open(filename, 'r') as f:
+#         for word in f.read().split():
+#             if word.lower() == word[::-1].lower():§
+#                 if len(word) > len(res):
+#                     res = word
+#     return res
+#
+# print(longest_palindrome('test_2.txt'))
 
 # print('makkam'.lower() == 'MakkaM'[::-1].lower())
 # print('Makk123M'[::-1].lower())
