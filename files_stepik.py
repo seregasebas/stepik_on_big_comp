@@ -4,6 +4,43 @@ print('Hello, chuvak!')
 print(25 * '-')
 '---------------------------------------------'
 
+
+def sum_columns(file_name: str) -> list[int]:
+    lst = []
+    with open(file_name, 'r') as f:
+        for line in f:
+            lst.append([num for num in map(int, line.split())])
+    f.close()
+    return list(map(sum, zip(*lst)))
+
+print(sum_columns('отчет.txt'))
+
+a = [34, 6, 55]
+b = [22, 56, 77]
+print(list(zip(a, b)))
+
+'---------------------------------------------'
+# def remove_punctuation(text: str) -> str:
+#     punctuation = '!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~'
+#     text_new = ''
+#     for char in text:
+#         if char not in punctuation:
+#             text_new += char
+#     return text_new
+# # Пример:
+# text = "Hello, World! How's it going?"
+# print(remove_punctuation(text))
+#
+# def get_unique_words(file_name: str) -> list[str]:
+#     lst = []
+#     with open(file_name, 'r') as f:
+#         for line in f:
+#             for word in line.split():
+#                 lst.append(remove_punctuation(word.lower()))
+#     f.close()
+#     return sorted(set(lst))
+#
+# print(get_unique_words('test_2.txt'))
 '---------------------------------------------'
 # def most_talkative_line(file_name: str) -> str:
 #     res = ''
@@ -87,4 +124,3 @@ print(25 * '-')
 #     return count
 #
 # print(count_lines_in_file('test_2.txt'))
-
