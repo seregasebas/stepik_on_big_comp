@@ -1,13 +1,35 @@
+from typing import Any
+
 print('Hello, chuvak!')
 print(25 * '-')
 '---------------------------------------------'
 
-def file_n_lines(file_name: str, n: int) -> None:
-    with open(file_name, 'r') as f:
-        for i in range(n):
-            print(f.readline().strip())
-    f.close()
-
+'---------------------------------------------'
+# def most_talkative_line(file_name: str) -> str:
+#     res = ''
+#     len_str = 0
+#     with open(file_name, 'r') as f:
+#         for line in f:
+#             if len(line.split()) >= len_str:
+#                 res = line
+#                 len_str = len(line.split())
+#     f.close()
+#     return res
+# print(most_talkative_line('test_2.txt'))
+'---------------------------------------------'
+# def print_lines_with_numbers(file: str) -> None:
+#     f = open(file, 'r')
+#     count = 1
+#     for line in f:
+#         print(f'{count}: {line.strip()}')
+#         count += 1
+#     f.close()
+'---------------------------------------------'
+# def file_n_lines(file_name: str, n: int) -> None:
+#     with open(file_name, 'r') as f:
+#         for i in range(n):
+#             print(f.readline().strip())
+#     f.close()
 '---------------------------------------------'
 # def print_first_and_last_line(name_files: str) -> None:
 #     with open(name_files, 'r') as f:
