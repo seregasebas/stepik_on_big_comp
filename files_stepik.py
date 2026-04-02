@@ -5,20 +5,20 @@ print('Hello, chuvak!')
 print(25 * '-')
 '---------------------------------------------'
 
-def get_best_student(filename: str) -> str:
-    best_student = ''
-    score = 0
-    f = open(filename, 'r', encoding='utf-8')
-    for line in f:
-        line = line.strip().split()
-        if int(line[2]) >= score:
-            score = int(line[2])
-            best_student = f'{line[1].replace(":", "")} {line[0]}'
-    f.close()
-    return best_student
-
-print(get_best_student('files/top_score_2.txt'))
-
+'---------------------------------------------'
+# def get_best_student(filename: str) -> str:
+#     best_student = ''
+#     score = 0
+#     f = open(filename, 'r', encoding='utf-8')
+#     for line in f:
+#         line = line.strip().split()
+#         if int(line[2]) >= score:
+#             score = int(line[2])
+#             best_student = f'{line[1].replace(":", "")} {line[0]}'
+#     f.close()
+#     return best_student
+#
+# print(get_best_student('files/top_score_2.txt'))
 '---------------------------------------------'
 # print(punctuation)
 #
