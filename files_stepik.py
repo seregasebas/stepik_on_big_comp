@@ -5,9 +5,52 @@ print('Hello, chuvak!')
 print(25 * '-')
 '---------------------------------------------'
 
-def word_frequencies(filename):
-    pass
-
+'---------------------------------------------'
+# def check_hits(shots: str, ships: str) -> int:
+#     with open(shots) as f1, open(ships) as f2:
+#         pif = set(f1.read().split())
+#         paf = set(f2.read().split())
+#     return len(pif & paf)
+#
+# # # def check_hits(shots_file: str, ships_file: str)-> int:
+# # #     shots = []
+# # #     ships = []
+# # #     boom = 0
+# # #     with open(shots_file, 'r', encoding='utf-8') as shoots_f:
+# # #         for line in shoots_f:
+# # #             shots.append(line.strip())
+# # #     with open(ships_file, 'r', encoding='utf-8') as ships_f:
+# # #         for line in ships_f:
+# # #             ships.append(line.strip())
+# # #     for shot in shots:
+# # #         if shot in ships:
+# # #             boom += 1
+# # #     return boom
+# #
+# print(check_hits('files/sea_war/shots_alpha.txt', 'files/sea_war/ships_alpha.txt'))
+'---------------------------------------------'
+# def find_words_ending_with_eya(filename: str) -> None:
+#     lst_words = []
+#     with open(filename, 'r', encoding='utf-8') as f:
+#         for line in f:
+#             line = line.strip().upper()
+#             if line[-2:] =='ЕЯ' and line not in lst_words:
+#                 lst_words.append(line)
+#     for word in sorted(lst_words, key=lambda x: (len(x), x[0])):
+#         print(word)
+#
+# find_words_ending_with_eya('files/base.txt')
+'---------------------------------------------'
+# def word_frequencies(filename: str) -> dict:
+#     dict_words = dict()
+#     with open(filename, 'r', encoding='utf-8') as f:
+#         for line in f:
+#             for word in line.strip().split():
+#                 dict_words.setdefault(word.upper(), 0)
+#                 dict_words[word.upper()] += 1
+#     return dict_words
+#
+# print(word_frequencies('files/greeting.txt'))
 '---------------------------------------------'
 # def count_unique_words(filename: str) -> int:
 #     words = []
