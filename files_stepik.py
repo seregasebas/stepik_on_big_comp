@@ -5,6 +5,29 @@ print('Hello, chuvak!')
 print(25 * '-')
 '---------------------------------------------'
 
+def word_frequencies(filename):
+    pass
+
+'---------------------------------------------'
+# def count_unique_words(filename: str) -> int:
+#     words = []
+#     with open(filename, 'r', encoding = 'utf-8') as f:
+#         for line in f:
+#             for word in line.strip().split():
+#                 if word.lower() not in words:
+#                     words.append(word.lower())
+#     return len(words)
+# print(count_unique_words('files/test_1.txt'))
+'---------------------------------------------'
+# def find_lines_len_more_6(file_name: str) -> int:
+#     count = 0
+#     with open(file_name, 'r', encoding='utf-8') as f:
+#         for line in f:
+#             if len(line.strip()) > 6:
+#                 count += 1
+#     return count
+#
+# print(find_lines_len_more_6('files/test3.txt'))
 '---------------------------------------------'
 # def get_best_student(filename: str) -> str:
 #     best_student = ''
