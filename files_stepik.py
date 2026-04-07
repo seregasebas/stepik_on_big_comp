@@ -9,6 +9,27 @@ print(25 * '-')
 '---------------------------------------------'
 '---------------------------------------------'
 '---------------------------------------------'
+# def generate_receipt(purchases: list[dict[str, int|float]]) -> None:
+#     with open('files/receipt.txt', 'w', encoding='utf=8') as f:
+#         f.write(f'==== Чек покупок ====\n')
+#         summa = 0
+#         for i, purchase in enumerate(purchases, 1):
+#             f.write(f'{i}. {purchase['название']} ({purchase['количество']:.2f} × {purchase['цена']:.2f}) '
+#                     f'= {purchase['количество'] * purchase['цена']:.2f}\n')
+#             summa += purchase['количество'] * purchase['цена']
+#         f.write(f'---------------------\n')
+#         f.write(f'ИТОГО: {summa:.2f} руб\n')
+#         f.write(f'======================\n')
+#
+# purchases = [
+#     {"название": "Яблоко", "цена": 30.5, "количество": 3},
+#     {"название": "Хлеб", "цена": 45.1, "количество": 1.5},
+#     {"название": "Молоко", "цена": 60.44, "количество": 2}
+# ]
+# generate_receipt(purchases)
+#
+# with open('files/receipt.txt', 'r', encoding='utf=8') as f:
+#     print(f.read())
 '---------------------------------------------'
 # def export_poll_results(*args) -> None:
 #     res = {}
