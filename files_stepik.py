@@ -1,67 +1,107 @@
 from typing import Any
-from string import punctuation
+# from string import punctuation
 
 print('Hello, chuvak!')
 print(25 * '-')
 '---------------------------------------------'
-def clean_file(filename) -> None:
-    lst_clean = []
-    with open(filename, 'r', encoding='utf-8') as file:
-        for line in file:
-            line = line.strip('\n')
-            if bool(line):
-                lst_clean.append(line)
-    with open('files/cleaned.txt', 'w', encoding='utf-8') as f:
-        for line in lst_clean:
-            f.write(f'{line}\n')
-
-clean_file('files/star_wars.txt')
-
-with open('files/cleaned.txt', 'r', encoding='utf-8') as f:
-    print(f.read())
 '---------------------------------------------'
-def remove_duplicate_lines(filename: str, output_filename: str) -> None:
-    with open(filename, 'r', encoding='utf-8') as file:
-        lst_clean = []
-        for line in file:
-            if line.strip('\n') not in lst_clean:
-                lst_clean.append(line.strip('\n'))
-    with open(output_filename, 'w', encoding='utf-8') as f:
-        for lst in lst_clean:
-            f.write(f'{lst}\n')
-    return None
-
-remove_duplicate_lines('files/meetings.txt', 'files/cleaned_meetings.txt')
-
-with open('files/cleaned_meetings.txt', 'r', encoding='utf-8') as f:
-    print(f.read())
 '---------------------------------------------'
-def reverse_lines(filename) -> None:
-    with open(filename, 'r', encoding='utf-8') as f:
-        all_lines = f.readlines()
-    with open('files/reversed.txt', 'w', encoding='utf-8') as file:
-        for line in all_lines[::-1]:
-            file.write(line.strip() + '\n')
-    return None
-
-reverse_lines('files/terminator.txt')
-
-with open('files/reversed.txt', 'r', encoding='utf-8') as f:
-    print(f.read())
 '---------------------------------------------'
-def save_shopping_list(items: list[str]) -> None:
-    with open('files/shopping.txt', 'w', encoding='utf-8') as file:
-        file.write('Список покупок:\n')
-        count = 1
-        for item in items:
-            file.write(f'{count}. {item}\n')
+def save_board(n: int) -> None:
+    doska = [[] for e in range(n)]
+    count = 0
+    for i in range(n):
+        for j in range(n):
+            if count % 2 == 0:
+                doska[i].append('#')
+            else:
+                doska[i].append('.')
             count += 1
-    return None
+    with open('chess_board.txt', 'w', encoding='utf-8') as f:
+        for lst in doska:
+            f.write(f'{lst}\n')
 
-save_shopping_list(['Хлеб', 'Молоко', 'Яйца'])
+save_board(5)
 
-with open('files/shopping.txt', 'r', encoding='utf-8') as f:
+with open('chess_board.txt', 'r', encoding='utf-8') as f:
     print(f.read())
+
+'---------------------------------------------'
+# def export_song_stats(filename: str) -> None:
+#     with open(filename, 'r', encoding='utf-8') as fr:
+#         file = fr.readlines()
+#     with open('files/stats.txt', 'w', encoding='utf-8') as fw:
+#         for i, f in enumerate(file, 1):
+#             fw.write(f'Строка {i}: {len(f.strip())} символов\n')
+#     return None
+# # export_song_stats('files/lyrics.txt')
+#
+# with open('files/jude.txt', 'r', encoding='utf-8') as f:
+#     print(f.readlines())
+#
+# export_song_stats('files/jude.txt')
+#
+# with open('files/stats.txt', 'r', encoding='utf-8') as f:
+#     print(f.read())
+'---------------------------------------------'
+# def clean_file(filename) -> None:
+#     lst_clean = []
+#     with open(filename, 'r', encoding='utf-8') as file:
+#         for line in file:
+#             line = line.strip('\n')
+#             if bool(line):
+#                 lst_clean.append(line)
+#     with open('files/cleaned.txt', 'w', encoding='utf-8') as f:
+#         for line in lst_clean:
+#             f.write(f'{line}\n')
+#
+# clean_file('files/star_wars.txt')
+#
+# with open('files/cleaned.txt', 'r', encoding='utf-8') as f:
+#     print(f.read())
+'---------------------------------------------'
+# def remove_duplicate_lines(filename: str, output_filename: str) -> None:
+#     with open(filename, 'r', encoding='utf-8') as file:
+#         lst_clean = []
+#         for line in file:
+#             if line.strip('\n') not in lst_clean:
+#                 lst_clean.append(line.strip('\n'))
+#     with open(output_filename, 'w', encoding='utf-8') as f:
+#         for lst in lst_clean:
+#             f.write(f'{lst}\n')
+#     return None
+#
+# remove_duplicate_lines('files/meetings.txt', 'files/cleaned_meetings.txt')
+#
+# with open('files/cleaned_meetings.txt', 'r', encoding='utf-8') as f:
+#     print(f.read())
+'---------------------------------------------'
+# def reverse_lines(filename) -> None:
+#     with open(filename, 'r', encoding='utf-8') as f:
+#         all_lines = f.readlines()
+#     with open('files/reversed.txt', 'w', encoding='utf-8') as file:
+#         for line in all_lines[::-1]:
+#             file.write(line.strip() + '\n')
+#     return None
+#
+# reverse_lines('files/terminator.txt')
+#
+# with open('files/reversed.txt', 'r', encoding='utf-8') as f:
+#     print(f.read())
+'---------------------------------------------'
+# def save_shopping_list(items: list[str]) -> None:
+#     with open('files/shopping.txt', 'w', encoding='utf-8') as file:
+#         file.write('Список покупок:\n')
+#         count = 1
+#         for item in items:
+#             file.write(f'{count}. {item}\n')
+#             count += 1
+#     return None
+#
+# save_shopping_list(['Хлеб', 'Молоко', 'Яйца'])
+#
+# with open('files/shopping.txt', 'r', encoding='utf-8') as f:
+#     print(f.read())
 '---------------------------------------------'
 # def check_hits(shots: str, ships: str) -> int:
 #     with open(shots) as f1, open(ships) as f2:
