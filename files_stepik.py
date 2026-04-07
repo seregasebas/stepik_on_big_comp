@@ -7,25 +7,90 @@ print(25 * '-')
 '---------------------------------------------'
 '---------------------------------------------'
 '---------------------------------------------'
-def save_board(n: int) -> None:
-    doska = [[] for e in range(n)]
-    count = 0
-    for i in range(n):
-        for j in range(n):
-            if count % 2 == 0:
-                doska[i].append('#')
-            else:
-                doska[i].append('.')
-            count += 1
-    with open('chess_board.txt', 'w', encoding='utf-8') as f:
-        for lst in doska:
-            f.write(f'{lst}\n')
-
-save_board(5)
-
-with open('chess_board.txt', 'r', encoding='utf-8') as f:
-    print(f.read())
-
+'---------------------------------------------'
+'---------------------------------------------'
+'---------------------------------------------'
+# def export_poll_results(*args) -> None:
+#     res = {}
+#     res_reverse = {}
+#     for dct in args:
+#         for k, v in dct.items():
+#             res.setdefault(k, 0)
+#             res[k] += v
+#     for key, value in sorted(res.items(), key=lambda x: (x[1], x[0]), reverse=False):
+#         res_reverse.setdefault(value, '')
+#         res_reverse[value] += key + ', '
+#     with open('files/results.txt', 'w', encoding='utf-8') as f:
+#         count = 1
+#         f.write('Итоги общего голосования:\n')
+#         for key,value in sorted(res_reverse.items(), key=lambda x: x[0], reverse=True):
+#             f.write(f'{count}. {value.strip(', ')} — {key} голосов\n')
+#             count += 1
+#     return None
+#
+# export_poll_results(
+#     {"Python": 12, "C++": 8, "Go": 9, "Swift": 6},
+#     {"Rust": 12, "Kotlin": 8, "Ruby": 6},
+#     {"Python": 3, "Go": 6, "Swift": 4, "Rust": 1},
+#     {"Kotlin": 2, "Ruby": 4, "JavaScript": 7}
+# )
+#
+# with open('files/results.txt', 'r', encoding='utf-8') as f:
+#     print(f.read())
+'---------------------------------------------'
+# def export_poll_results(results: dict[str, int]) -> None:
+#     with open('files/results.txt', 'w', encoding='utf-8') as file:
+#         file.write('Результаты опроса:\n')
+#         count = 1
+#         for key, values in sorted(results.items(), key = lambda x: x[1], reverse = True ):
+#             file.write(f'{count}. {key} — {values} голосов\n')
+#             count += 1
+#
+# results = {
+#     "Python": 38,
+#     "JavaScript": 25,
+#     "C++": 12,
+#     "Java": 17
+# }
+# export_poll_results(results)
+#
+# with open('files/results.txt', 'r', encoding='utf-8') as f:
+#     print(f.read())
+'---------------------------------------------'
+# def create_file_with_numbers(n: int) -> None:
+#     with open("files/" + f'range_{n}.txt', 'w', encoding='utf-8') as f:
+#         for i in range(1, n+1):
+#             f.write(str(i) + '\n')
+#     return None
+#
+# create_file_with_numbers(5)
+#
+# with open('files/range_5.txt', 'r', encoding='utf-8') as f:
+#     print(f.read())
+'---------------------------------------------'
+# def save_board(n: int) -> None:
+#     doska = [[] for e in range(n)]
+#     count = 0
+#     for i in range(n):
+#         for j in range(n):
+#             if count % 2 == 0:
+#                 doska[i].append('#')
+#             else:
+#                 doska[i].append('.')
+#             count += 1
+#         if n % 2 == 0:
+#             count += 1
+#         else:
+#             continue
+#     with open('files/chess_board.txt', 'w', encoding='utf-8') as f:
+#         for lst in doska:
+#             f.write(f'{''.join(lst)}\n')
+#     return None
+# # save_board(5)
+# save_board(10)
+#
+# with open('files/chess_board.txt', 'r', encoding='utf-8') as f:
+#     print(f.read())
 '---------------------------------------------'
 # def export_song_stats(filename: str) -> None:
 #     with open(filename, 'r', encoding='utf-8') as fr:
