@@ -8,37 +8,36 @@ print(25 * '-')
 '---------------------------------------------'
 '---------------------------------------------'
 '---------------------------------------------'
-def mark_hits(field_file: str, shots_file: str) -> None:
-    field = {}
-    name = 'ABCDEFGHIJ'
-    game = []
-    game_lst=[]
-    with (open(field_file, 'r', encoding='utf-8') as fi,
-          open(shots_file, 'r', encoding='utf-8') as sh):
-        f = fi.readlines()
-        for i in range(len(name)):
-            for j in range(len(name)):
-                field[name[j] + str(i+1)] = f[i].split()[j]
-        for s in sh:
-            if field[s.strip()] == '~':
-                field[s.strip()] = '•'
-            elif field[s.strip()] == '■':
-                field[s.strip()] = 'X'
-
-        for value in field.values():
-            game += value + ' '
-
-        game_lst = [game[i:i + 20] for i in range(0, len(game), 20)]
-
-    with open('files/sea_war/updated_field.txt', 'w', encoding='utf-8') as file:
-        for lst in game_lst:
-            file.write(f'{"".join(lst)}\n')
-    return None
-
-mark_hits('files/sea_war/field_1.txt', 'files/sea_war/shots_1.txt')
-with open('files/sea_war/updated_field.txt', 'r', encoding='utf-8') as f:
-    print(f.read())
-
+# def mark_hits(field_file: str, shots_file: str) -> None:
+#     field = {}
+#     name = 'ABCDEFGHIJ'
+#     game = []
+#     game_lst=[]
+#     with (open(field_file, 'r', encoding='utf-8') as fi,
+#           open(shots_file, 'r', encoding='utf-8') as sh):
+#         f = fi.readlines()
+#         for i in range(len(name)):
+#             for j in range(len(name)):
+#                 field[name[j] + str(i+1)] = f[i].split()[j]
+#         for s in sh:
+#             if field[s.strip()] == '~':
+#                 field[s.strip()] = '•'
+#             elif field[s.strip()] == '■':
+#                 field[s.strip()] = 'X'
+#
+#         for value in field.values():
+#             game += value + ' '
+#
+#         game_lst = [game[i:i + 20] for i in range(0, len(game), 20)]
+#
+#     with open('files/sea_war/updated_field.txt', 'w', encoding='utf-8') as file:
+#         for lst in game_lst:
+#             file.write(f'{"".join(lst)}\n')
+#     return None
+#
+# mark_hits('files/sea_war/field_1.txt', 'files/sea_war/shots_1.txt')
+# with open('files/sea_war/updated_field.txt', 'r', encoding='utf-8') as f:
+#     print(f.read())
 '---------------------------------------------'
 # def export_poll_results(*args) -> None:
 #     res = {}
