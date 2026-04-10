@@ -1,12 +1,39 @@
 from typing import Any
 # from string import punctuation
+import json
 print('Hello, chuvak!')
 print(25 * '-')
 '---------------------------------------------'
 '---------------------------------------------'
 '---------------------------------------------'
 '---------------------------------------------'
+def get_max_women(json_file: json) -> None:
+    max_women = 0
+    key_id = 0
+    with open(json_file, 'r', encoding='utf-8') as file:
+        data = json.load(file)
+        res = {}
+        for d in data:
+            for p in d['people']:
+                if p['gender'] == 'Female' and p['year'] > 1977:
+                    res.setdefault(d['id_group'], 0)
+                    res[d['id_group']] += 1
+
+        for key, value in res.items():
+            if value > max_women:
+                max_women = value
+                key_id = key
+    print(f'{key_id} {max_women}')
+
+get_max_women('files/json/group_people.json')
 '---------------------------------------------'
+# def print_sorted_people(json_string: json) -> None:
+#     data = json.loads(json_string)
+#     for person in sorted(data, key=lambda x: (x['age'], x['name'])):
+#         print(f'{person["name"]}, {person["country"]}, {person["age"]}')
+#
+# people = '[{"name": "Charlie Brown", "country": "USA", "age": 25}, {"name": "Amanda Clark", "country": "Canada", "age": 25},{"name": "Alice Johnson", "country": "USA", "age": 28}, {"name": "Mark Smith", "country": "UK", "age": 35}, {"name": "Sophie Lee", "country": "Australia", "age": 22}, {"name": "Ivan Petrov", "country": "Russia", "age": 30}]'
+# print_sorted_people(people)
 '---------------------------------------------'
 # def mark_hits(field_file: str, shots_file: str) -> None:
 #     field = {}
