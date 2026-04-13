@@ -6,23 +6,43 @@ print(25 * '-')
 '---------------------------------------------'
 '---------------------------------------------'
 '---------------------------------------------'
-def decode_text(encoded: str, alphabet: json) -> None:
-    decoded_text = ''
-    with open(encoded, 'r', encoding='utf-8') as file, open(alphabet, 'r') as a_file:
-        alphabet_text = json.load(a_file)
-        for line in file:
-            for char in line:
-                if char not in alphabet_text:
-                    decoded_text += char
-                else:
-                    decoded_text += alphabet_text[char]
-    with open('files/json/decoded.txt', 'w', encoding = 'utf-8') as file:
-        file.write(decoded_text)
-
-# decode_text('files/json/secret.txt', 'files/json/alpha.json')
-decode_text('files/json/abracadabra.txt', 'files/json/alpha_13.json')
-with open('files/json/decoded.txt', 'r', encoding='utf-8') as file:
-    print(file.read())
+'---------------------------------------------'
+'---------------------------------------------'
+'---------------------------------------------'
+'---------------------------------------------'
+'---------------------------------------------'
+# def find_best_manager(json_file: json) -> None:
+#     sell_manager = {}
+#     with open(json_file, 'r', encoding='utf-8') as file:
+#         data = json.load(file)
+#
+#     for manager in data:
+#         for car in manager['cars']:
+#             sell_manager.setdefault(manager['manager']['first_name'] + ' ' + manager['manager']['last_name'], 0)
+#             sell_manager[manager['manager']['first_name'] + ' ' + manager['manager']['last_name']] += car['price']
+#
+#     best_manager = max(sell_manager.items(), key=lambda x: x[1])
+#     print(*best_manager)
+#
+# find_best_manager('files/json/sales_small.json')
+'---------------------------------------------'
+# def decode_text(encoded: str, alphabet: json) -> None:
+#     decoded_text = ''
+#     with open(encoded, 'r', encoding='utf-8') as file, open(alphabet, 'r') as a_file:
+#         alphabet_text = json.load(a_file)
+#         for line in file:
+#             for char in line:
+#                 if char not in alphabet_text:
+#                     decoded_text += char
+#                 else:
+#                     decoded_text += alphabet_text[char]
+#     with open('files/json/decoded.txt', 'w', encoding = 'utf-8') as file:
+#         file.write(decoded_text)
+#
+# # decode_text('files/json/secret.txt', 'files/json/alpha.json')
+# decode_text('files/json/abracadabra.txt', 'files/json/alpha_13.json')
+# with open('files/json/decoded.txt', 'r', encoding='utf-8') as file:
+#     print(file.read())
 '---------------------------------------------'
 # def get_max_women(json_file: json) -> None:
 #     max_women = 0

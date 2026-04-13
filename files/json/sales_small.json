@@ -1,0 +1,16 @@
+[
+  {
+    "manager": {"first_name": "Dasi", "last_name": "Ungerer"},
+    "cars": [
+      {"maker": "Audi", "model": "100", "year": 1993, "price": 3504},
+      {"maker": "Ford", "model": "F-Series", "year": 1997, "price": 14382}
+    ]
+  },
+  {
+    "manager": {"first_name": "Wendell", "last_name": "Fortescue"},
+    "cars": [
+      {"maker": "BMW", "model": "5 Series", "year": 1999, "price": 11585},
+      {"maker": "Honda", "model": "CR-V", "year": 2004, "price": 13680}
+    ]
+  }
+]
