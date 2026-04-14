@@ -1,0 +1,17 @@
+[
+  {
+    "user": "John",
+    "text": "Great explanation!",
+    "likes": 15
+  },
+  {
+    "user": "Артем",
+    "text": "Отличный урок!",
+    "likes": 12
+  },
+  {
+    "user": "Мария",
+    "text": "Спасибо, всё понятно",
+    "likes": 8
+  }
+]

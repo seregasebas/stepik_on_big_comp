@@ -7,9 +7,70 @@ print(25 * '-')
 '---------------------------------------------'
 '---------------------------------------------'
 '---------------------------------------------'
+# def export_comments(comments, filename, reverse=None):
+#     with open(filename, 'w', encoding='utf-8') as f:
+#         if reverse == True:
+#             json.dump(sorted(comments, key=lambda x: x['likes'], reverse=True), f, ensure_ascii=False, indent=2)
+#         elif reverse == False:
+#             json.dump(sorted(comments, key=lambda x: x['likes']), f, ensure_ascii=False, indent=2)
+#         else:
+#             json.dump(comments, f, ensure_ascii=False, indent=2)
+# data = [
+#     {"user": "Артем", "text": "Отличный урок!", "likes": 12},
+#     {"user": "Мария", "text": "Спасибо, всё понятно", "likes": 8},
+#     {"user": "John", "text": "Great explanation!", "likes": 15}
+# ]
+#
+# export_comments(data,'files/json/comments.json', True)
+#
+# with open('files/json/comments.json', 'r', encoding='utf-8') as f:
+#     print(f.read())
+# # print(sorted(data, key=lambda x: x['likes'], reverse=True))
 '---------------------------------------------'
+# def save_profile(compact=False, sort=False, **kwargs) -> None:
+#     with open('files/json/profile_1.json', 'w', encoding='utf-8') as file:
+#         if compact==False and sort==False:
+#             json.dump(kwargs, file, indent=2, ensure_ascii=False)
+#         elif compact==True and sort==False:
+#             json.dump(kwargs, file, ensure_ascii=False)
+#         elif compact==False and sort==True:
+#             json.dump(kwargs, file, indent=2, sort_keys=True, ensure_ascii=False)
+#         else:
+#             json.dump(kwargs, file, sort_keys=True, ensure_ascii=False)
+#
+# # save_profile(
+# #     name="Андрей",
+# #     age=40,
+# #     occupation="Data Engineer",
+# #     country="Россия",
+# #     compact=False,
+# #     sort=False
+# # )
+#
+# save_profile(
+#     name="Андрей",
+#     age=40,
+#     occupation="Data Engineer",
+#     country="Россия",
+#     compact=True,
+#     sort=True
+# )
+#
+# with open('files/json/profile_1.json', 'r', encoding='utf-8') as file:
+#     print(file.read())
 '---------------------------------------------'
-'---------------------------------------------'
+# def save_profile(dct: dict) -> None:
+#     with open('files/json/profile.json', 'w', encoding='utf-8') as file:
+#         json.dump(dct, file, indent=2, ensure_ascii=False)
+#
+# dct = {"name": "Артем", "age": 35, "hobbies": ["теннис", "чтение", "программирование"], "is_student": False}
+#
+# save_profile(dct)
+#
+# with open('files/json/profile.json', 'r', encoding='utf-8') as file:
+#     # data = json.load(file)
+#     # print(data)
+#     print(file.read())
 '---------------------------------------------'
 # def find_best_manager(json_file: json) -> None:
 #     sell_manager = {}
