@@ -1,0 +1,12 @@
+[
+  {
+    "user": "Мария",
+    "text": "Обожаю JavaScript",
+    "likes": 10
+  },
+  {
+    "user": "John",
+    "text": "JS проще, чем C++",
+    "likes": 7
+  }
+]

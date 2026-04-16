@@ -1,17 +1,28 @@
-[
-  {
-    "user": "John",
-    "text": "Great explanation!",
-    "likes": 15
-  },
-  {
-    "user": "Артем",
-    "text": "Отличный урок!",
-    "likes": 12
-  },
-  {
-    "user": "Мария",
-    "text": "Спасибо, всё понятно",
-    "likes": 8
-  }
-]
+{
+  "Python": [
+    {
+      "user": "Мария",
+      "text": "Жду продолжения курса!",
+      "likes": 5
+    },
+    {
+      "user": "Артем",
+      "text": "Очень классный урок!",
+      "likes": 3
+    }
+  ],
+  "JavaScript": [
+    {
+      "user": "John",
+      "text": "JavaScript — the best!",
+      "likes": 8
+    }
+  ],
+  "C++": [
+    {
+      "user": "Alex",
+      "text": "C++ слишком сложный",
+      "likes": 3
+    }
+  ]
+}

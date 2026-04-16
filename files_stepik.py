@@ -7,6 +7,67 @@ print(25 * '-')
 '---------------------------------------------'
 '---------------------------------------------'
 '---------------------------------------------'
+'---------------------------------------------'
+'---------------------------------------------'
+# def export_comments_by_category(comments) -> None:
+#     res = {}
+#     res_dict = {}
+#
+#     for comment in comments:
+#         res.setdefault(comment['category'], []).append(comment)
+#     for k, v in res.items():
+#         for comment in v:
+#             del comment['category']
+#         res_dict[k] = sorted(v, key=lambda x: x['likes'], reverse=True)
+#
+#     for k, v in res_dict.items():
+#         with open('files/json/exp_com_by_cat/' + k.lower() + '_comments.json', 'w', encoding='utf-8') as f:
+#             json.dump(v, f, ensure_ascii=False, indent=2)
+#
+# comments = [
+#     {"user": "Артем", "text": "Python — сила!", "likes": 15, "category": "Python"},
+#     {"user": "Мария", "text": "Обожаю JavaScript", "likes": 10, "category": "JavaScript"},
+#     {"user": "John", "text": "JS проще, чем C++", "likes": 7, "category": "JavaScript"},
+#     {"user": "Alex", "text": "C++ сложный, но мощный", "likes": 12, "category": "C++"}
+# ]
+#
+# export_comments_by_category(comments)
+# print('Python'.center(12, '-'))
+# with open('files/json/exp_com_by_cat/python_comments.json', 'r', encoding='utf-8') as f:
+#     print(f.read())
+#
+# print('JavaScript'.center(12, '-'))
+# with open('files/json/exp_com_by_cat/javascript_comments.json', 'r', encoding='utf-8') as f:
+#     print(f.read())
+#
+# print('C++'.center(12, '-'))
+# with open('files/json/exp_com_by_cat/c++_comments.json', 'r', encoding='utf-8') as f:
+#     print(f.read())
+'---------------------------------------------'
+# def export_grouped_comments(comments: list[dict], filename) -> None:
+#     res = {}
+#     res_dict = {}
+#     for comment in comments:
+#         res.setdefault(comment['category'], []).append(comment)
+#
+#     for k, v in res.items():
+#         for comment in v:
+#             del comment['category']
+#         res_dict[k] = sorted(v, key=lambda x: x['likes'], reverse=True)
+#
+#     with open(filename, 'w', encoding='utf-8') as f:
+#         json.dump(res_dict, f, ensure_ascii=False, indent=2)
+# comments = [
+#     {"user": "Артем", "text": "Очень классный урок!", "likes": 3, "category": "Python"},
+#     {"user": "Мария", "text": "Жду продолжения курса!", "likes": 5, "category": "Python"},
+#     {"user": "John", "text": "JavaScript — the best!", "likes": 8, "category": "JavaScript"},
+#     {"user": "Alex", "text": "C++ слишком сложный", "likes": 3, "category": "C++"}
+# ]
+#
+# export_grouped_comments(comments, filename='files/json/comments.json')
+# with open('files/json/comments.json', 'r', encoding='utf-8') as f:
+#     print(f.read())
+'---------------------------------------------'
 # def export_comments(comments, filename, reverse=None):
 #     with open(filename, 'w', encoding='utf-8') as f:
 #         if reverse == True:
