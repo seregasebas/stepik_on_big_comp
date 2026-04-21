@@ -8,6 +8,36 @@ print(25 * '-')
 '---------------------------------------------'
 '---------------------------------------------'
 '---------------------------------------------'
+# def export_poll_results(*args):
+#     new_dict = dict()
+#     json_dict = dict()
+#     json_file = []
+#     sum_point = 0
+#     #создаем словарь из язык-сумма баллов. Считаем сумму всех баллов для последующего подсчета процентов
+#     for arg in args:
+#         for key, value in arg.items():
+#             new_dict.setdefault(key, 0)
+#             new_dict[key] += value
+#             sum_point += value
+#     #Переворачиваем словарь и создаем с одинаковыми баллами языки
+#     for key, value in sorted(new_dict.items(), key=lambda item: (item[1], item[0])):
+#         json_dict.setdefault(value, []).append(key)
+#     #делаем структуру данных для последующей записи в json, сортировка по убыванию
+#     for key, value in sorted(json_dict.items(), reverse=True):
+#         json_file.append({"languages":value,
+#                           "votes": key,
+#                           "percent": key/sum_point*100})
+#     #записываем данные в json файл
+#     with open('files/json/results.json', 'w', encoding='utf-8') as f:
+#         json.dump(json_file, f, ensure_ascii=False, indent=2)
+#
+# export_poll_results(
+#     {"Python": 21, "JavaScript": 25, "C++": 10},
+#     {"Python": 12, "C++": 15, "Java": 17}
+# )
+#
+# with open('files/json/results.json', 'r', encoding='utf-8') as f:
+#     print(f.read())
 '---------------------------------------------'
 # def export_comments_by_category(comments) -> None:
 #     res = {}

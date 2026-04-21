@@ -1,0 +1,24 @@
+[
+  {
+    "languages": [
+      "Python"
+    ],
+    "votes": 33,
+    "percent": 33.0
+  },
+  {
+    "languages": [
+      "C++",
+      "JavaScript"
+    ],
+    "votes": 25,
+    "percent": 25.0
+  },
+  {
+    "languages": [
+      "Java"
+    ],
+    "votes": 17,
+    "percent": 17.0
+  }
+]
