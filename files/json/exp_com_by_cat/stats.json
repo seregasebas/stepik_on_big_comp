@@ -1,0 +1,23 @@
+{
+  "total_comments": 5,
+  "total_likes": 52,
+  "total_users": 3,
+  "total_categories": 2,
+  "users": [
+    {
+      "user": "artem",
+      "comments": 2,
+      "likes": 23
+    },
+    {
+      "user": "maria",
+      "comments": 2,
+      "likes": 22
+    },
+    {
+      "user": "john",
+      "comments": 1,
+      "likes": 7
+    }
+  ]
+}

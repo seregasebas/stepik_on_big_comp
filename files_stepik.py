@@ -7,6 +7,51 @@ print(25 * '-')
 '---------------------------------------------'
 '---------------------------------------------'
 '---------------------------------------------'
+# def export_stats(*args) -> None:
+#     total_comments = 0
+#     total_likes = 0
+#     total_users = 0
+#     total_categories = 0
+#     users = dict()
+#     users_json = []
+#     #Проводим десереализацию входящих json файлов
+#     for arg in args:
+#         #Количество обработанных файлов
+#         total_categories += 1
+#         with open(arg, 'r', encoding='utf-8') as f:
+#             for line in json.load(f):
+#                 # Количество комментариев
+#                 total_comments += 1
+#                 # Количество лайков
+#                 total_likes += line['likes']
+#                 # список уникальных юзеров с количеством их комментариев и лайков
+#                 users.setdefault(line['user'], {'comments': 0, 'likes': 0})
+#                 users[line['user']]['comments'] += 1
+#                 users[line['user']]['likes'] += line['likes']
+#     #Сортируем словарь по убыванию лайков и по алфавиту, если лайки одинаковые и
+#     # создаем список user_json с требуемыми задачей значениями для users
+#     for key, value in sorted(users.items(), key=lambda item: (item[1]['likes'], item[0]), reverse=True):
+#         #считаем уникальныъ юзеров
+#         total_users += 1
+#         #создаем словарь с данными для последующей записи в json файл в ключ users
+#         users_json.append({'user': key, 'comments': value['comments'], 'likes': value['likes']})
+#
+#     # финальный словарь для записи в json файл
+#     res = {
+#         "total_comments": total_comments,
+#         "total_likes": total_likes,
+#         "total_users": total_users,
+#         "total_categories": total_categories,
+#         "users": users_json
+#     }
+#
+#     with open('files/json/exp_com_by_cat/stats.json', 'w', encoding='utf-8') as f:
+#         json.dump(res, f, ensure_ascii=False, indent=2)
+#
+# export_stats('files/json/exp_com_by_cat/python_comments.json', 'files/json/exp_com_by_cat/javascript_comments.json')
+#
+# with open('files/json/exp_com_by_cat/stats.json', 'r', encoding='utf-8') as f:
+#     print(f.read())
 '---------------------------------------------'
 # def export_poll_results(*args):
 #     new_dict = dict()

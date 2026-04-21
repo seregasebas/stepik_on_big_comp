@@ -1,12 +1,4 @@
 [
-  {
-    "user": "Мария",
-    "text": "Обожаю JavaScript",
-    "likes": 10
-  },
-  {
-    "user": "John",
-    "text": "JS проще, чем C++",
-    "likes": 7
-  }
+  {"user": "john", "text": "js крутой!", "likes": 7},
+  {"user": "maria", "text": "js ❤️", "likes": 10}
 ]

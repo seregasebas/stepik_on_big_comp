@@ -1,7 +1,5 @@
 [
-  {
-    "user": "Артем",
-    "text": "Python — сила!",
-    "likes": 15
-  }
+  {"user": "artem", "text": "python лучший!", "likes": 15},
+  {"user": "maria", "text": "python forever!", "likes": 12},
+  {"user": "artem", "text": "просто и понятно", "likes": 8}
 ]
