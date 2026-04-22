@@ -1,3 +1,4 @@
+import csv
 from typing import Any
 # from string import punctuation
 import json
@@ -6,6 +7,8 @@ print(25 * '-')
 '---------------------------------------------'
 '---------------------------------------------'
 '---------------------------------------------'
+# with open('files/csv/cafe_orders.csv', 'r', encoding='utf-8') as f:
+#     print(f.read())
 '---------------------------------------------'
 # def export_stats(*args) -> None:
 #     total_comments = 0
