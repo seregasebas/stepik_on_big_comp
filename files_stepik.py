@@ -7,9 +7,71 @@ print(25 * '-')
 '---------------------------------------------'
 '---------------------------------------------'
 '---------------------------------------------'
+# def print_columns(filename: str, columns: list[str]) -> None:
+#     res_list = [[] for _ in range(len(columns))]
+#     count = 0
+#     na = 0
+#     for column in columns:
+#         with open(filename, 'r', encoding='utf-8') as file:
+#             reader = csv.reader(file)
+#             cols = next(reader)
+#             if column in cols:
+#                 for row in reader:
+#                     res_list[count].append(row[cols.index(column)])
+#             else:
+#                 na += 1
+#                 for row in reader:
+#                     res_list[count].append("N/A")
+#             count += 1
+#     if na == len(columns):
+#         print('Указанные колонки не найдены.')
+#     else:
+#         transported = list(zip(*res_list))
+#         for row in transported:
+#             print(';'.join(row))
+#
+# print_columns('files/csv/library_books.csv', ["fвтор", ['her'],"hейтинг"])
 '---------------------------------------------'
+# def print_column_values(filename: str, column_name: str) -> None:
+#     with open(filename, 'r', encoding='utf-8') as f:
+#         reader = csv.reader(f)
+#         column = next(reader)
+#         if column_name in column:
+#             for row in reader:
+#                 print(row[column.index(column_name)])
+#         else:
+#             print(f'Колонка "{column_name}" не найдена.')
+#
+# print_column_values('files/csv/library_books.csv', 'Жанр')
 '---------------------------------------------'
+# def print_book_titles(filename: str) -> None:
+#     with open(filename, 'r', encoding='utf-8') as file:
+#         reader = csv.reader(file)
+#         next(reader)
+#         for row in reader:
+#             print(row[1])
+#
+# print_book_titles('files/csv/books.csv')
 '---------------------------------------------'
+# def read_csv(filename: str, show_header=True, limit=None) -> None:
+#     with open(filename, 'r', encoding='utf-8') as f:
+#         reader = csv.reader(f)
+#         if show_header:
+#             if limit is not None:
+#                 for i in range(limit+1):
+#                     print(next(reader))
+#             else:
+#                 for row in reader:
+#                     print(row)
+#         else:
+#             next(reader)
+#             if limit is not None:
+#                 for i in range(limit):
+#                     print(next(reader))
+#             else:
+#                 for row in reader:
+#                     print(row)
+# read_csv('files/csv/books.csv', show_header=False, limit=2)
 '---------------------------------------------'
 # with open("files/csv/users.csv", 'r', encoding="utf-8") as f:
 #     reader = csv.reader(f)
