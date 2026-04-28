@@ -10,6 +10,36 @@ print(25 * '-')
 '---------------------------------------------'
 '---------------------------------------------'
 '---------------------------------------------'
+# def merge_catalogs(products_filename, prices_filename) -> None:
+#     prod_list = []
+#     price_list = {}
+#     merge_list = []
+#     with open(products_filename, 'r', encoding='utf-8') as prod, open(prices_filename, 'r', encoding='utf-8') as price:
+#         reader_prod = csv.reader(prod)
+#         reader_price = csv.reader(price)
+#         merge_list.append(next(reader_prod) + next(reader_price)[1].split())
+#         for row in reader_prod:
+#             prod_list.append(row)
+#         for row in reader_price:
+#             price_list[row[0]] = row[1]
+#
+#     prices = [key for key in price_list]
+#
+#     for i in range(len(prod_list)):
+#         if prod_list[i][0] in prices:
+#             merge_list.append(prod_list[i] + price_list[prod_list[i][0]].split())
+#
+#     with open('files/csv/merged.csv', 'w', encoding='utf-8', newline='') as f:
+#         writer = csv.writer(f)
+#         for row in merge_list:
+#             writer.writerow(row)
+#
+# #merge_catalogs('files/csv/products.csv', 'files/csv/prices.csv')
+# #merge_catalogs('files/csv/products3.csv', 'files/csv/prices3.csv')
+# merge_catalogs('files/csv/products2.csv', 'files/csv/prices2.csv')
+#
+# with open('files/csv/merged.csv', encoding='utf-8') as f:
+#     print(f.read())
 '---------------------------------------------'
 # def save_matrix_to_csv(matrix: list[list], filename: str) -> None:
 #     with open(filename, 'w', encoding='utf-8', newline='') as f:
