@@ -7,6 +7,39 @@ print(25 * '-')
 '---------------------------------------------'
 '---------------------------------------------'
 '---------------------------------------------'
+'---------------------------------------------'
+'---------------------------------------------'
+'---------------------------------------------'
+'---------------------------------------------'
+# def save_matrix_to_csv(matrix: list[list], filename: str) -> None:
+#     with open(filename, 'w', encoding='utf-8', newline='') as f:
+#         writer = csv.writer(f)
+#         for row in matrix:
+#             writer.writerow(row)
+#
+# mtrx = [
+#     [1, 2, 3],
+#     [4, 5, 6],
+#     [7, 8, 9]
+# ]
+#
+# f_name = "files/csv/matrix.csv"
+#
+# save_matrix_to_csv(mtrx, f_name)
+#
+# with open("files/csv/matrix.csv", 'r', encoding='utf-8') as f:
+#     print(f.read())
+'---------------------------------------------'
+# def print_movies(filename: str) -> None:
+#     with open(filename, 'r', encoding='utf-8') as f:
+#         reader = csv.reader(f)
+#         next(reader)
+#         for row in reader:
+#             title, genre, duration, rating = row
+#             print(f'Фильм: {title} | Жанр: {genre} | Длительность: {duration} мин | Рейтинг: {rating}')
+#
+# print_movies('files/csv/movies1.csv')
+'---------------------------------------------'
 # def print_columns(filename: str, columns: list[str]) -> None:
 #     res_list = [[] for _ in range(len(columns))]
 #     count = 0
