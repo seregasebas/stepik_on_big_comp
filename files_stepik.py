@@ -8,15 +8,54 @@ print(25 * '-')
 '---------------------------------------------'
 '---------------------------------------------'
 '---------------------------------------------'
+# def export_genre_summary(filename: str) -> None:
+#     res = {}
+#     res_csv = []
+#     #обработка входящего файла
+#     with open(filename, 'r', encoding='utf-8') as f:
+#         reader = csv.reader(f)
+#         next(reader)
+#         #новый словарь с нужными данными
+#         for i in reader:
+#             res.setdefault(i[1], {'title':[], 'duration':[], 'rating':[]})
+#             res[i[1]]['title'].append(i[0])
+#             res[i[1]]['duration'].append(float(i[2]))
+#             res[i[1]]['rating'].append(float(i[3]))
+#
+#     for k, v in sorted(res.items()):
+#         res_csv.append([k, len(v['title']), round(sum(v['rating'])/len(v['rating']),1), round(sum(v['duration'])/len(v['duration']), 1)])
+#
+#     with open('files/csv/genre_summary.csv', 'w', encoding='utf-8', newline='') as f:
+#         writer = csv.writer(f, delimiter=',')
+#         writer.writerow(['genre','total_movies','average_rating','average_duration'])
+#         writer.writerows(sorted(res_csv, key=lambda x: (-x[2], x[0])))
+#
+# export_genre_summary('files/csv/movies2.csv')
+#
+# with open('files/csv/genre_summary.csv', 'r', encoding='utf-8') as f:
+#     print(f.read())
 '---------------------------------------------'
-def export_user_stats(filename: str) -> None:
-    res = {}
-    with open(filename, 'r', encoding='utf-8') as f:
-        data = json.load(f)
-    for i in data:
-        print(i)
-
-export_user_stats('files/csv/reviews.json')
+# def export_user_stats(filename: str) -> None:
+#     res = {}
+#     res_csv = [['user', 'total_reviews', 'average_rating']]
+#     with open(filename, 'r', encoding='utf-8') as f:
+#         data = json.load(f)
+#     for i in data:
+#         res.setdefault(i['user'], {'rating': [], 'comment': []})
+#         res[i['user']]['rating'].append(i['rating'])
+#         res[i['user']]['comment'].append(i['comment'])
+#
+#     for k, v in sorted(res.items()):
+#         res_csv.append([k, len(v['comment']), round(sum(v['rating']) / len(v['rating']), 1)])
+#
+#     with open('files/csv/user_stats.csv', 'w', encoding='utf-8', newline='') as f:
+#         writer = csv.writer(f, delimiter=',')
+#         writer.writerows(res_csv)
+#
+# export_user_stats('files/csv/reviews2.json')
+#
+# with open('files/csv/user_stats.csv', 'r', encoding='utf-8') as f:
+#     print(f.read())
 '---------------------------------------------'
 # def merge_catalogs(products_filename, prices_filename) -> None:
 #     prod_list = []

@@ -1,0 +1,8 @@
+[
+  {"user": "alex", "rating": 5, "comment": "👍"},
+  {"user": "diana", "rating": 4, "comment": "Good"},
+  {"user": "alex", "rating": 3, "comment": "ok"},
+  {"user": "bob", "rating": 2, "comment": "bad"},
+  {"user": "alex", "rating": 4, "comment": "fine"},
+  {"user": "diana", "rating": 5, "comment": "love it!"}
+]
