@@ -1,0 +1,5 @@
+[
+  {"user": "alice", "rating": 5, "comment": "Great!"},
+  {"user": "bob", "rating": 3, "comment": "Average"},
+  {"user": "alice", "rating": 4, "comment": "Nice"}
+]

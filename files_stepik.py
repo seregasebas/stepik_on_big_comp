@@ -9,6 +9,14 @@ print(25 * '-')
 '---------------------------------------------'
 '---------------------------------------------'
 '---------------------------------------------'
+def export_user_stats(filename: str) -> None:
+    res = {}
+    with open(filename, 'r', encoding='utf-8') as f:
+        data = json.load(f)
+    for i in data:
+        print(i)
+
+export_user_stats('files/csv/reviews.json')
 '---------------------------------------------'
 # def merge_catalogs(products_filename, prices_filename) -> None:
 #     prod_list = []
