@@ -10,6 +10,34 @@ print(25 * '-')
 '---------------------------------------------'
 '---------------------------------------------'
 '---------------------------------------------'
+# def export_summary(filenames: list[str], output_filename: str) -> None:
+#     customers = {}
+#     res_csv = {}
+#     for filename in filenames:
+#         with open(f'files/csv/salary/{filename}', 'r', encoding='utf-8') as f:
+#             data = json.load(f)
+#             if len(data) > 0:
+#                 customers.setdefault(filename.replace('.json', ''), [])
+#                 for row in data:
+#                     customers[filename.replace('.json', '')].append(row)
+#
+#     for k, v in customers.items():
+#         res_csv.setdefault(k, {'department':'', 'employees':[], 'average_salary':[]})
+#         for row in v:
+#             res_csv[k]['department'] = k
+#             res_csv[k]['employees'].append(row['name'])
+#             res_csv[k]['average_salary'].append(float(row['salary']))
+#
+#     with open(f'files/csv/salary/{output_filename}', 'w', encoding='utf-8', newline='') as f:
+#         writer = csv.writer(f, delimiter=',')
+#         writer.writerow(['department', 'employees', 'average_salary', 'min_salary', 'max_salary'])
+#         for k, v in sorted(res_csv.items()):
+#             writer.writerow([k, len(v['employees']), round(sum(v['average_salary'])/len(v['average_salary']), 2), round(min(v['average_salary']), 2), round(max(v['average_salary']), 2)])
+#
+# export_summary(['it.json', 'hr.json', 'sales.json', 'sales2.json'], 'stat_depatrments.csv')
+#
+# with open('files/csv/salary/stat_depatrments.csv', 'r', encoding='utf-8') as f:
+#     print(f.read())
 '---------------------------------------------'
 # def export_students_to_json(students_file_name, enrollments_file_name) -> None:
 #     students = {}

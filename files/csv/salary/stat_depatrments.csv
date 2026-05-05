@@ -1,0 +1,4 @@
+department,employees,average_salary,min_salary,max_salary
+hr,2,92500.0,90000.0,95000.0
+it,3,123333.33,100000.0,150000.0
+sales,3,131666.67,105000.0,180000.0
