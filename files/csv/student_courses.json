@@ -1,0 +1,39 @@
+[
+  {
+    "id": 1,
+    "name": "Аня",
+    "courses": [
+      "Git",
+      "Python"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Борис",
+    "courses": [
+      "SQL"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Света",
+    "courses": [
+      "Django",
+      "Python",
+      "SQL"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Тимур",
+    "courses": []
+  },
+  {
+    "id": 5,
+    "name": "Марина",
+    "courses": [
+      "Linux",
+      "Networks"
+    ]
+  }
+]

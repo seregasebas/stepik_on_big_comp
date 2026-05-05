@@ -8,6 +8,86 @@ print(25 * '-')
 '---------------------------------------------'
 '---------------------------------------------'
 '---------------------------------------------'
+'---------------------------------------------'
+'---------------------------------------------'
+'---------------------------------------------'
+# def export_students_to_json(students_file_name, enrollments_file_name) -> None:
+#     students = {}
+#     res_json = []
+#     with open(students_file_name, 'r', encoding='utf-8') as s_f, open(enrollments_file_name, 'r', encoding='utf-8') as e_f:
+#         s_reader = csv.reader(s_f, delimiter=':')
+#         e_reader = csv.reader(e_f, delimiter=':')
+#         next(s_reader)
+#         next(e_reader)
+#
+#         for s_row in s_reader:
+#             students.setdefault(s_row[0], {'id': int(s_row[0]), 'name': s_row[1], 'courses': []})
+#         for e_row in e_reader:
+#             students[e_row[0]]['courses'].append(e_row[1])
+#
+#     for k, v in students.items():
+#         v['courses'] = sorted(v['courses'])
+#         res_json.append(v)
+#
+#     with open('files/csv/student_courses.json', 'w', encoding='utf-8') as f:
+#         json.dump(res_json, f, ensure_ascii=False, indent=2)
+#
+# export_students_to_json('files/csv/students.csv', 'files/csv/enrollments.csv')
+#
+# with open('files/csv/student_courses.json', 'r', encoding='utf-8') as f:
+#     print(f.read())
+'---------------------------------------------'
+# def merge_student_courses(students_file_name: str, enrollments_file_name: str) -> None:
+#     students_courses = {}
+#
+#     with open(students_file_name, 'r', encoding='utf-8') as s_f, open(enrollments_file_name, 'r', encoding='utf-8') as e_f:
+#         s_reader = csv.reader(s_f, delimiter=':')
+#         next(s_reader)
+#         e_reader = csv.reader(e_f, delimiter=':')
+#         next(e_reader)
+#
+#         for s in s_reader:
+#             students_courses.setdefault(s[0], {'name': "", 'courses':[]})
+#             students_courses[s[0]]['name'] = s[1]
+#
+#         for e in e_reader:
+#             students_courses[e[0]]['courses'].append(e[1])
+#
+#     with open('files/csv/student_courses.csv', 'w', newline='', encoding='utf-8') as f:
+#         writer = csv.writer(f, delimiter=":")
+#         writer.writerow(['name', 'courses'])
+#
+#         for k, v in students_courses.items():
+#             if len(v['courses']) > 0:
+#                 writer.writerow([v['name'], ', '.join(sorted(v['courses']))])
+#             else:
+#                 writer.writerow([v['name'], 'Пока нет направлений обучения'])
+#
+# merge_student_courses('files/csv/students.csv', 'files/csv/enrollments.csv')
+#
+# with open('files/csv/student_courses.csv', 'r', encoding='utf-8') as f:
+#     print(f.read())
+'---------------------------------------------'
+# def export_category_summary(filename: str) -> None:
+#     res = {}
+#     with open(filename, 'r', encoding='utf-8') as f:
+#         reader = csv.reader(f)
+#         next(reader)
+#         for row in reader:
+#             res.setdefault(row[2], {'unique_customers':[], 'total_sales':[]})
+#             res[row[2]]['unique_customers'].append(row[0])
+#             res[row[2]]['total_sales'].append(int(row[3]))
+#     with open('files/csv/category_summary.csv', 'w', encoding='utf-8', newline='') as f:
+#         writer = csv.writer(f)
+#         writer.writerow(['category', 'total_sales' ,'unique_customers'])
+#         for k, v in sorted(res.items(), key=lambda x: x[0], reverse=False):
+#             writer.writerow([k, sum(v['total_sales']), len(set(v['unique_customers']))])
+#
+# export_category_summary('files/csv/purchases.csv')
+#
+# with open('files/csv/category_summary.csv', 'r', encoding='utf-8') as f:
+#     print(f.read())
+'---------------------------------------------'
 # def export_genre_summary(filename: str) -> None:
 #     res = {}
 #     res_csv = []
