@@ -9,6 +9,50 @@ print(25 * '-')
 '---------------------------------------------'
 '---------------------------------------------'
 '---------------------------------------------'
+# def export_team_stats(filename: str) -> None:
+#     result = {}
+#     with open(filename, 'r', encoding='utf-8') as f:
+#         reader = csv.reader(f)
+#         next(reader)
+#
+#         for row in reader:
+#             result.setdefault(row[0], {'Команда':row[0], 'Матчи':0,'Победы':0, 'Поражения':0, 'Ничьи':0, 'Забито':0,
+#                                        'Пропущено':0})
+#             result.setdefault(row[1],
+#                               {'Команда': row[1], 'Матчи': 0, 'Победы': 0, 'Поражения': 0, 'Ничьи': 0, 'Забито': 0,
+#                                'Пропущено': 0})
+#             #добавляем команде и сопернику по 1 игре
+#             result[row[0]]['Матчи'] += 1
+#             result[row[1]]['Матчи'] += 1
+#             #пропущенные и забитые голы команды и соперника
+#             result[row[0]]['Забито'] += int(row[2])
+#             result[row[0]]['Пропущено'] += int(row[3])
+#             result[row[1]]['Забито'] += int(row[3])
+#             result[row[1]]['Пропущено'] += int(row[2])
+#             #условие, если команда выиграла соперника
+#             if int(row[2]) > int(row[3]):
+#                 result[row[0]]['Победы'] += 1
+#                 result[row[1]]['Поражения'] += 1
+#             # условие, если команда проиграла сопернику
+#             elif int(row[2]) < int(row[3]):
+#                 result[row[0]]['Поражения'] += 1
+#                 result[row[1]]['Победы'] += 1
+#             else:
+#                 result[row[0]]['Ничьи'] += 1
+#                 result[row[1]]['Ничьи'] += 1
+#
+#     #создаем итоговый csv файл
+#     with open('files/csv/team_stats.csv', 'w', encoding='utf-8') as f:
+#         writer = csv.writer(f, delimiter=',')
+#         writer.writerow(['Команда', 'Матчи', 'Победы', 'Поражения', 'Ничьи', 'Забито', 'Пропущено', 'Разница'])
+#         for key, value in sorted(result.items()):
+#             writer.writerow([value['Команда'], value['Матчи'], value['Победы'], value['Поражения'],
+#                              value['Ничьи'], value['Забито'], value['Пропущено'], value['Забито']-value['Пропущено']])
+#
+# export_team_stats('files/csv/match_results.csv')
+#
+# with open('files/csv/team_stats.csv', 'r', encoding='utf-8') as f:
+#     print(f.read())
 '---------------------------------------------'
 # def export_summary(filenames: list[str], output_filename: str) -> None:
 #     customers = {}
