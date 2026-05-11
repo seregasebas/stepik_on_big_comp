@@ -9,6 +9,28 @@ print(25 * '-')
 '---------------------------------------------'
 '---------------------------------------------'
 '---------------------------------------------'
+'---------------------------------------------'
+'---------------------------------------------'
+'---------------------------------------------'
+# def save_catalog_to_csv(catalog, filename):
+#     f_names = [key for key in catalog[0].keys()]
+#
+#     with open(filename, 'w', encoding='utf-8', newline='') as f:
+#         writer = csv.DictWriter(f, fieldnames=f_names)
+#         writer.writeheader()
+#         writer.writerows(catalog)
+#
+# catalog = [
+#     {"product": "Чай", "category": "Напитки", "price": 100},
+#     {"product": "Кофе", "category": "Напитки", "price": 200},
+#     {"product": "Печенье", "category": "Сладости", "price": 150}
+# ]
+#
+# save_catalog_to_csv(catalog, 'files/csv/products.csv')
+#
+# with open('files/csv/products.csv', 'r', encoding='utf-8') as f:
+#     print(f.read())
+'---------------------------------------------'
 # def export_team_stats(filename: str) -> None:
 #     result = {}
 #     with open(filename, 'r', encoding='utf-8') as f:
