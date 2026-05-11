@@ -10,7 +10,70 @@ print(25 * '-')
 '---------------------------------------------'
 '---------------------------------------------'
 '---------------------------------------------'
+# def export_columns(products: list[dict], filename:str, columns:list[str]) -> None:
+#     count = 0
+#     for column in columns:
+#         if column in products[0]:
+#             count += 1
+#
+#     if count > 0:
+#         with open(filename, 'w', newline='', encoding='utf-8') as f:
+#             writer = csv.DictWriter(f, fieldnames=columns, extrasaction='ignore', restval="N/A")
+#             writer.writeheader()
+#             writer.writerows(products)
+#     else:
+#         print('Ни одна из указанных колонок не найдена.')
+#
+# catalog = [
+#     {"product": "Чай", "category": "Напитки", "price": 100},
+#     {"product": "Кофе", "category": "Напитки", "price": 200},
+#     {"product": "Печенье", "category": "Сладости", "price": 150}
+# ]
+#
+# export_columns(catalog, 'files/csv/selected.csv', ["product", "price"])
+#
+# try:
+#     with open('files/csv/selected.csv', 'r', encoding='utf-8') as f:
+#         print(f.read())
+# except FileNotFoundError:
+#     print('Файл selected.csv не обнаружен')
 '---------------------------------------------'
+# def export_column(products:list[dict], filename:str, column_name:str) -> None:
+#     if column_name in products[0]:
+#         with open(filename, 'w', newline='', encoding='utf-8') as file:
+#             writer = csv.DictWriter(file, fieldnames=[column_name], extrasaction='ignore')
+#             writer.writeheader()
+#             writer.writerows(products)
+#     else:
+#         print(f'Колонка {column_name} отсутствует в данных.')
+#
+# # catalog = [
+# #     {"product": "Чай", "category": "Напитки", "price": 100},
+# #     {"product": "Кофе", "category": "Напитки", "price": 200},
+# #     {"product": "Печенье", "category": "Сладости", "price": 150}
+# # ]
+#
+# catalog = [
+#     {"product": "Чай", "category": "Напитки", "price": 100},
+#     {"product": "Кофе", "category": "Напитки", "price": 200},
+#     {"product": "Сок", "category": "Напитки", "price": 150},
+#     {"product": "Печенье", "category": "Сладости", "price": 90},
+#     {"product": "Шоколад", "category": "Сладости", "price": 250},
+#     {"product": "Сахар", "category": "Продукты", "price": 55},
+#     {"product": "Соль", "category": "Продукты", "price": 30},
+# ]
+#
+# # export_column(catalog, 'files/csv/price.csv', 'price')
+# export_column(catalog, 'files/csv/quantity.csv.csv', 'quantity')
+#
+# # with open('files/csv/price.csv', 'r', encoding='utf-8') as f:
+# #     print(f.read())
+#
+# try:
+#     with open('files/csv/quantity.csv', 'r', encoding='utf-8') as f:
+#         print(f.read())
+# except FileNotFoundError:
+#     print('Файл quantity.csv не обнаружен')
 '---------------------------------------------'
 # def save_catalog_to_csv(catalog, filename):
 #     f_names = [key for key in catalog[0].keys()]
