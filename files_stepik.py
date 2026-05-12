@@ -8,7 +8,74 @@ print(25 * '-')
 '---------------------------------------------'
 '---------------------------------------------'
 '---------------------------------------------'
+# def export_order_stats(catalog_filename: str, orders_filename: str) -> None:
+#     header = ['product', 'quantity_sold', 'total_revenue', 'revenue_share']
+#     res = {}
+#     res_csv = []
+#     total = 0
+#     with open(catalog_filename, 'r', encoding='utf-8') as catalog, open(orders_filename, 'r', encoding='utf-8') as orders:
+#         catalog_reader = csv.DictReader(catalog)
+#         orders_reader = csv.DictReader(orders)
+#
+#         for row in orders_reader:
+#             res.setdefault(row['product_id'], {'product':'', 'quantity_sold': 0, 'total_revenue':1, 'revenue_share':[]})
+#             res[row['product_id']]['quantity_sold'] += int(row['quantity'])
+#
+#         for row in catalog_reader:
+#             res[row['id']]['product'] = row['product']
+#             res[row['id']]['total_revenue'] = res[row['id']]['quantity_sold'] * int(row['price'])
+#             total += res[row['id']]['total_revenue']
+#
+#         for k, v in res.items():
+#             v['revenue_share'] = round(v['total_revenue'] / total * 100, 1)
+#             res_csv.append(v)
+#
+#     with open('files/csv/order_stats.csv', 'w', newline='', encoding='utf-8') as f:
+#         writer = csv.DictWriter(f, fieldnames=header)
+#         writer.writeheader()
+#         writer.writerows(sorted(res_csv, key=lambda x: x['product']))
+#
+# export_order_stats('files/csv/catalog.csv', 'files/csv/orders.csv')
+#
+# with open('files/csv/order_stats.csv', 'r', encoding='utf-8') as f:
+#     print(f.read())
 '---------------------------------------------'
+# def export_catalog(data: list[dict], mapping_filename: str, output_filename: str) -> None:
+#     f_name = []
+#     res = [{} for _ in range(len(data))]
+#     with open(mapping_filename, 'r', encoding='utf-8') as f:
+#         header = json.load(f)
+#     for row in range(len(data)):
+#         for k,v in data[row].items():
+#             if k in header:
+#                 res[row][header[k]] = v
+#
+#         for k,v in data[row].items():
+#             if k not in header:
+#                 res[row][k] = v
+#
+#     for key in res[0].keys():
+#         f_name.append(key)
+#
+#     with open(output_filename, 'w', newline='', encoding='utf-8') as f:
+#         writer = csv.DictWriter(f, fieldnames=f_name)
+#         writer.writeheader()
+#         writer.writerows(res)
+#
+# products = [
+#     {"Название": "Чай зелёный", "Цена": 120, "Категория": "Напитки", "Склад": "A1"},
+#     {"Название": "Мед натуральный", "Цена": 340, "Категория": "Продукты"},
+#     {"Название": "Кофе арабика", "Цена": 290, "Категория": "Напитки", "Склад": "B3"}
+# ]
+#
+# # export_catalog(products, 'files/csv/mapping.json',
+# #                'files/csv/catalog_en.csv')
+#
+# export_catalog(products, 'files/csv/part_mapping.json',
+#                'files/csv/catalog_en.csv')
+#
+# with open('files/csv/catalog_en.csv', 'r', encoding='utf-8') as f:
+#     print(f.read())
 '---------------------------------------------'
 # def export_columns(products: list[dict], filename:str, columns:list[str]) -> None:
 #     count = 0
