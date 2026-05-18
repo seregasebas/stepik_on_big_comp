@@ -2,11 +2,238 @@ import csv
 from typing import Any
 # from string import punctuation
 import json
+import pickle
 print('Hello, chuvak!')
 print(25 * '-')
 '---------------------------------------------'
 '---------------------------------------------'
 '---------------------------------------------'
+'---------------------------------------------'
+'---------------------------------------------'
+'---------------------------------------------'
+'---------------------------------------------'
+'---------------------------------------------'
+# def rec_dict(item):
+#     count = 1
+#     if isinstance(item, dict):
+#         for key, value in item.items():
+#             if isinstance(value, dict):
+#                 count += 1
+#                 rec_dict(value)
+#     return item, count
+#
+# def dict_to_xml(data: dict) -> None:
+#     with open('files/xml/students.xml', 'w', encoding='utf-8') as file:
+#         file.write(f'<Students>\n')
+#         for s in data['Students']:
+#             file.write(f'  <Student>\n')
+#             for k, v in s.items():
+#                 item, count = rec_dict(v)
+#                 if isinstance(item, list):
+#                     file.write(f'  <{k}>\n')
+#                     for f in item:
+#                         file.write(f'    <{k[:-1]}>{f}</{k[:-1]}>\n')
+#                     file.write(f'  </{k}>\n')
+#                 else:
+#                     file.write(f'    <{k}>{v}</{k}>\n')
+#             file.write(f'  </Student>\n')
+#         file.write(f'</Students>\n')
+
+def dict_to_xml(data: dict) -> None:
+    with open('files/xml/students.xml', 'w', encoding='utf-8') as file:
+        file.write(f'<Students>\n')
+        for s in data['Students']:
+            file.write(f'  <Student>\n')
+            for k, v in s.items():
+                item, count = rec_dict(v)
+                if isinstance(item, list):
+                    file.write(f'  <{k}>\n')
+                    for f in item:
+                        file.write(f'    <{k[:-1]}>{f}</{k[:-1]}>\n')
+                    file.write(f'  </{k}>\n')
+                else:
+                    file.write(f'    <{k}>{v}</{k}>\n')
+            file.write(f'  </Student>\n')
+        file.write(f'</Students>\n')
+
+
+# data = {
+#     "Students": [
+#         {
+#             "Имя": "Алиса",
+#             "Возраст": "25",
+#             "Контакты": {
+#                 "Email": "alice@mail.com",
+#                 "Телефон": "+31-000-00-00"
+#             },
+#             "Курсы": ["Python", "SQL"]
+#         }
+#     ]
+# }
+
+data = {
+    "Students": [
+        {
+            "Имя": "Neo",
+            "Возраст": "29",
+            "Профиль": {
+                "Город": "Zion",
+                "Навыки": ["Focus", "Dodge", "Jump"],
+                "Контакты": {
+                    "Email": "neo@matrix.io",
+                    "Телефон": "unknown"
+                }
+            },
+            "Курсы": ["Python"]
+        }
+    ]
+}
+
+dict_to_xml(data)
+
+with open('files/xml/students.xml', 'r', encoding='utf-8') as file:
+    print(file.read())
+'---------------------------------------------'
+# def dict_to_xml(data: dict) -> None:
+#     with open('files/xml/students.xml', 'w', encoding='utf-8') as file:
+#         file.write(f'<Students>\n')
+#         for s in data['Students']:
+#             file.write(f'  <Student>\n')
+#             for k,v in s.items():
+#                 if isinstance(v, list):
+#                     file.write(f'    <{k}>\n')
+#                     for i in v:
+#                         file.write(f'      <{k[:-1]}>{i}</{k[:-1]}>\n')
+#                     file.write(f'    </{k}>\n')
+#                 else:
+#                     file.write(f'    <{k}>{v}</{k}>\n')
+#             file.write(f'  </Student>\n')
+#         file.write(f'</Students>\n')
+#
+# data = {
+#     "Students": [
+#         {"Имя": "Алиса", "Возраст": "25", "Курсы": ["Python", "SQL", "Git"]}
+#     ]
+# }
+#
+# dict_to_xml(data)
+#
+# with open('files/xml/students.xml', 'r', encoding='utf-8') as file:
+#     print(file.read())
+'---------------------------------------------'
+# def dict_to_xml(data: dict) -> None:
+#     with open('files/xml/students.xml', 'w', encoding='utf-8') as file:
+#         file.write(f'<Students>\n')
+#         for s in data['Students']:
+#             file.write(f'  <Student>\n')
+#             for k, v in s.items():
+#                 file.write(f'    <{k}>{v}</{k}>\n')
+#             file.write(f'  </Student>\n')
+#         file.write(f'</Students>\n')
+#
+# data = {
+#     "Students": [
+#         {"Имя": "Алиса", "Возраст": "25"},
+#         {"Имя": "Борис", "Возраст": "27"}
+#     ]
+# }
+#
+# dict_to_xml(data)
+#
+# with open("files/xml/students.xml", "r", encoding="utf-8") as file:
+#     print(file.read())
+'---------------------------------------------'
+# def dict_to_xml(data: dict) -> None:
+#     with open('files/xml/student.xml', 'w', encoding='utf-8') as file:
+#         for key, value in data.items():
+#             file.write(f'<{key}>\n')
+#             for k, v in value.items():
+#                 file.write(f'  <{k}>{v}</{k}>\n')
+#             file.write(f'</{key}>')
+#
+# student = {
+#     "Student": {
+#         "Имя": "Алиса",
+#         "Возраст": "25"
+#     }
+# }
+#
+# dict_to_xml(student)
+#
+# with open("files/xml/student.xml", "r", encoding="utf-8") as file:
+#     print(file.read())
+'---------------------------------------------'
+# def get_login_hash(login: str) -> int:
+#     return abs(hash(login))
+#
+# def save_state(users: dict):
+#     hash_login = get_login_hash(users['login'])
+#     with open(f'files/csv/save_game_{hash_login}.pkl', 'wb') as file:
+#         pickle.dump(users['state'], file)
+#
+# def load_state(login_text: str):
+#     login_hash = get_login_hash(login_text)
+#     try:
+#         with open(f'files/csv/save_game_{login_hash}.pkl', 'rb') as file:
+#             state = pickle.load(file)
+#             return state
+#     except:
+#         return {}
+#
+# user = {
+#     "login": "SleepyDragon",
+#     "state": {"location": (10, 20), "inventory": ["apple"], "stats": {"hp": 90}}
+# }
+#
+# save_state(user)
+# restored = load_state("SleepyDragon")
+# print(restored)
+#
+# print(load_state("ChillPenguin"))
+#
+# user = {
+#     "login": "skrip_kresla",
+#     "state": {
+#         "location": (5, 10),
+#         "inventory": ["apple", "stick"],
+#         "stats": {"hp": 95, "mana": 30}
+#     }
+# }
+#
+# save_state(user)
+#
+# hash_value = get_login_hash('skrip_kresla')
+#
+# with open(f"files/csv/save_game_{hash_value}.pkl", "rb") as file:
+#     print(file.read())
+'---------------------------------------------'
+# def load_and_describe_function(filename: str) -> None:
+#     with open(filename, 'rb') as f:
+#         loaded_function = pickle.load(f)
+#         print(f'Имя функции: {loaded_function.__name__}')
+#         if loaded_function.__doc__:
+#             print(f'Описание: {loaded_function.__doc__.strip()}')
+#         else:
+#             print('Описание: Нет описания (docstring)')
+# # В Степике работает, так как там функции определны
+# load_and_describe_function('files/csv/add.pkl')
+'---------------------------------------------'
+# def load_hobbies(filename: str) -> list:
+#     with open(filename, 'rb') as f:
+#         loaded = pickle.load(f)
+#         return loaded
+#
+# print(load_hobbies('files/csv/their_hobbies.pkl'))
+# '---------------------------------------------'
+# def save_hobbies(filename: str, hobbies: list[str]) -> None:
+#     with open(filename, 'wb') as f:
+#         pickle.dump(hobbies, f)
+#
+# hobbies = ["Теннис", "Программирование", "Чтение"]
+# save_hobbies("files/csv/their_hobbies.pkl", hobbies)
+#
+# with open('files/csv/their_hobbies.pkl', 'rb') as f:
+#     print(f.read())
 '---------------------------------------------'
 # def export_order_stats(catalog_filename: str, orders_filename: str) -> None:
 #     header = ['product', 'quantity_sold', 'total_revenue', 'revenue_share']

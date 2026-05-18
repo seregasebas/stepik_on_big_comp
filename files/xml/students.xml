@@ -1,0 +1,8 @@
+<Students>
+  <Student>
+    <Имя>Neo</Имя>
+    <Возраст>29</Возраст>
+    <Профиль>{'Город': 'Zion', 'Навыки': ['Focus', 'Dodge', 'Jump'], 'Контакты': {'Email': 'neo@matrix.io', 'Телефон': 'unknown'}}</Профиль>
+    <Курсы>['Python']</Курсы>
+  </Student>
+</Students>
