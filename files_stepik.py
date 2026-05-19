@@ -13,91 +13,110 @@ print(25 * '-')
 '---------------------------------------------'
 '---------------------------------------------'
 '---------------------------------------------'
-def rec_dict(item):
-    count = 1
-    if isinstance(item, dict):
-        for key, value in item.items():
-            if isinstance(value, dict):
-                count += 1
-                rec_dict(value)
-    return item, count
-
-def dict_to_xml(data: dict) -> None:
-    with open('files/xml/students.xml', 'w', encoding='utf-8') as file:
-        file.write(f'<Students>\n')
-        for s in data['Students']:
-            file.write(f'  <Student>\n')
-            for k, v in s.items():
-                item, count = rec_dict(v)
-                if isinstance(item, list):
-                    file.write(f'  <{k}>\n')
-                    for f in item:
-                        file.write(f'    <{k[:-1]}>{f}</{k[:-1]}>\n')
-                    file.write(f'  </{k}>\n')
-                else:
-                    file.write(f'    <{k}>{v}</{k}>\n')
-            file.write(f'  </Student>\n')
-        file.write(f'</Students>\n')
-
+# # Код с рекуцрчсией, охуенный. Для любой степени ыложенности
+# def rec_dict(item, file, otstup = 4):
+#     indent = ' ' * otstup
+#     for key, value in item.items():
+#         if isinstance(value, dict):
+#             file.write(f'{indent}<{key}>\n')
+#             rec_dict(value, file, otstup + 2)
+#             file.write(f'{indent}</{key}>\n')
+#         elif isinstance(value, list):
+#             file.write(f'{indent}<{key}>\n')
+#             for val in value:
+#                 file.write(f'{" " * (otstup+2)}<{key[:-1]}>{val}</{key[:-1]}>\n')
+#             file.write(f'{indent}</{key}>\n')
+#         else:
+#             file.write(f'{indent}<{key}>{value}</{key}>\n')
+#     return None
+#
 # def dict_to_xml(data: dict) -> None:
 #     with open('files/xml/students.xml', 'w', encoding='utf-8') as file:
 #         file.write(f'<Students>\n')
 #         for s in data['Students']:
-#             file.write(f'{' '*2}<Student>\n')
-#             for key, value in s.items():
-#                 if isinstance(value, list):
-#                     file.write(f'{' '*4}<{key}>\n')
-#                     for v in value:
-#                         file.write(f'{' '*6}<{key[:-1]}>{v}</{key[:-1]}>\n')
-#                     file.write(f'{' ' * 4}</{key}>\n')
-#                 elif isinstance(value, dict):
-#                     file.write(f'{' '*4}<{key}>\n')
-#                     for k, v in value.items():
-#                         if isinstance(v, list):
-#                             file.write(f'{' '*6}<{k}>\n')
-#                             for val in v:
-#                                 file.write(f'{' '*8}<{k[:-1]}>{val}</{k[:-1]}>\n')
-#                             file.write(f'{' ' * 6}</{k}>\n')
-#                         elif isinstance(v, dict):
-#                             file.write(f'{' '*6}<{k}>\n')
-#                             for keys, values in v.items():
-#                                 if isinstance(values, dict):
-#                                     file.write(f'{' '*8}<{keys}>\n')
-#                                     for kal, val in values.items():
+#             file.write(f'  <Student>\n')
+#             rec_dict(s, file)
+#             file.write(f'  </Student>\n')
+#         file.write(f'</Students>\n')
 #
-#                                         if isinstance(val, list):
-#                                             file.write(f'{' ' * 10}<{kal}>\n')
-#                                             for vv in val:
-#                                                 file.write(f'{' '*12}<{kal[:-1]}>{vv}</{kal[:-1]}>\n')
-#                                             file.write(f'{' ' * 10}</{kal}>\n')
-#                                         else:
-#                                             file.write(f'{' '*10}<{kal}><{val}></{kal}>\n')
-#                                     file.write(f'{' ' * 8}</{keys}>\n')
-#                                 else:
-#                                     file.write(f'{' '*8}<{keys}>{values}</{keys}>\n')
-#                             file.write(f'{' ' * 6}</{k}>\n')
-#                         else:
-#                             file.write(f'{' '*6}<{k}>{v}</{k}>\n')
-#                     file.write(f'{' ' * 4}</{key}>\n')
-#                 else:
-#                     file.write(f'{' ' * 4}<{key}>{value}</{key}>\n')
-#             file.write(f'{' '*2}</Student>\n')
-#         file.write(f'</Students>')
-
-# data = {
-#     "Students": [
-#         {
-#             "Имя": "Алиса",
-#             "Возраст": "25",
-#             "Контакты": {
-#                 "Email": "alice@mail.com",
-#                 "Телефон": "+31-000-00-00"
-#             },
-#             "Курсы": ["Python", "SQL"]
-#         }
-#     ]
-# }
-
+# ## Код подобраный под задачи
+# # def dict_to_xml(data: dict) -> None:
+# #     with open('files/xml/students.xml', 'w', encoding='utf-8') as file:
+# #         file.write(f'<Students>\n')
+# #         for s in data['Students']:
+# #             file.write(f'{' '*2}<Student>\n')
+# #             for key, value in s.items():
+# #                 if isinstance(value, list):
+# #                     file.write(f'{' '*4}<{key}>\n')
+# #                     for v in value:
+# #                         file.write(f'{' '*6}<{key[:-1]}>{v}</{key[:-1]}>\n')
+# #                     file.write(f'{' ' * 4}</{key}>\n')
+# #                 elif isinstance(value, dict):
+# #                     file.write(f'{' '*4}<{key}>\n')
+# #                     for k, v in value.items():
+# #                         if isinstance(v, list):
+# #                             file.write(f'{' '*6}<{k}>\n')
+# #                             for val in v:
+# #                                 file.write(f'{' '*8}<{k[:-1]}>{val}</{k[:-1]}>\n')
+# #                             file.write(f'{' ' * 6}</{k}>\n')
+# #                         elif isinstance(v, dict):
+# #                             file.write(f'{' '*6}<{k}>\n')
+# #                             for keys, values in v.items():
+# #                                 if isinstance(values, dict):
+# #                                     file.write(f'{' '*8}<{keys}>\n')
+# #                                     for kal, val in values.items():
+# #
+# #                                         if isinstance(val, list):
+# #                                             file.write(f'{' ' * 10}<{kal}>\n')
+# #                                             for vv in val:
+# #                                                 file.write(f'{' '*12}<{kal[:-1]}>{vv}</{kal[:-1]}>\n')
+# #                                             file.write(f'{' ' * 10}</{kal}>\n')
+# #                                         else:
+# #                                             file.write(f'{' '*10}<{kal}>{val}</{kal}>\n')
+# #                                     file.write(f'{' ' * 8}</{keys}>\n')
+# #                                 else:
+# #                                     file.write(f'{' '*8}<{keys}>{values}</{keys}>\n')
+# #                             file.write(f'{' ' * 6}</{k}>\n')
+# #                         else:
+# #                             file.write(f'{' '*6}<{k}>{v}</{k}>\n')
+# #                     file.write(f'{' ' * 4}</{key}>\n')
+# #                 else:
+# #                     file.write(f'{' ' * 4}<{key}>{value}</{key}>\n')
+# #             file.write(f'{' '*2}</Student>\n')
+# #         file.write(f'</Students>')
+# #
+# # data = {
+# #     "Students": [
+# #         {
+# #             "Имя": "Алиса",
+# #             "Возраст": "25",
+# #             "Контакты": {
+# #                 "Email": "alice@mail.com",
+# #                 "Телефон": "+31-000-00-00"
+# #             },
+# #             "Курсы": ["Python", "SQL"]
+# #         }
+# #     ]
+# # }
+#
+# # data = {
+# #     "Students": [
+# #         {
+# #             "Имя": "Neo",
+# #             "Возраст": "29",
+# #             "Профиль": {
+# #                 "Город": "Zion",
+# #                 "Навыки": ["Focus", "Dodge", "Jump"],
+# #                 "Контакты": {
+# #                     "Email": "neo@matrix.io",
+# #                     "Телефон": "unknown"
+# #                 }
+# #             },
+# #             "Курсы": ["Python"]
+# #         }
+# #     ]
+# # }
+#
 # data = {
 #     "Students": [
 #         {
@@ -105,55 +124,37 @@ def dict_to_xml(data: dict) -> None:
 #             "Возраст": "29",
 #             "Профиль": {
 #                 "Город": "Zion",
-#                 "Навыки": ["Focus", "Dodge", "Jump"],
+#                 "Статус": "Chosen One",
 #                 "Контакты": {
 #                     "Email": "neo@matrix.io",
-#                     "Телефон": "unknown"
+#                     "Резервные": {
+#                         "Email": "backup@matrix.io",
+#                         "Телефоны": ["unknown", "red-phone"]
+#                     }
+#                 },
+#                 "Навыки": ["Focus", "Dodge", "Jump"]
+#             },
+#             "Курсы": ["Python", "Linux", "Networking"]
+#         },
+#         {
+#             "Имя": "Trinity",
+#             "Возраст": "28",
+#             "Профиль": {
+#                 "Город": "Matrix",
+#                 "Контакты": {
+#                     "Email": "trinity@matrix.io"
 #                 }
 #             },
-#             "Курсы": ["Python"]
+#             "Хобби": ["мотоциклы", "стрельба"],
+#             "Проекты": ["Matrix", "Zion"]
 #         }
 #     ]
 # }
-
-data = {
-    "Students": [
-        {
-            "Имя": "Neo",
-            "Возраст": "29",
-            "Профиль": {
-                "Город": "Zion",
-                "Статус": "Chosen One",
-                "Контакты": {
-                    "Email": "neo@matrix.io",
-                    "Резервные": {
-                        "Email": "backup@matrix.io",
-                        "Телефоны": ["unknown", "red-phone"]
-                    }
-                },
-                "Навыки": ["Focus", "Dodge", "Jump"]
-            },
-            "Курсы": ["Python", "Linux", "Networking"]
-        },
-        {
-            "Имя": "Trinity",
-            "Возраст": "28",
-            "Профиль": {
-                "Город": "Matrix",
-                "Контакты": {
-                    "Email": "trinity@matrix.io"
-                }
-            },
-            "Хобби": ["мотоциклы", "стрельба"],
-            "Проекты": ["Matrix", "Zion"]
-        }
-    ]
-}
-
-dict_to_xml(data)
-
-with open('files/xml/students.xml', 'r', encoding='utf-8') as file:
-    print(file.read())
+#
+# dict_to_xml(data)
+#
+# with open('files/xml/students.xml', 'r', encoding='utf-8') as file:
+#     print(file.read())
 '---------------------------------------------'
 # def dict_to_xml(data: dict) -> None:
 #     with open('files/xml/students.xml', 'w', encoding='utf-8') as file:
