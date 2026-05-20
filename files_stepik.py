@@ -1,8 +1,10 @@
 import csv
+import sys
 from typing import Any
 # from string import punctuation
 import json
 import pickle
+import xml.etree.ElementTree as ET
 print('Hello, chuvak!')
 print(25 * '-')
 '---------------------------------------------'
@@ -12,6 +14,67 @@ print(25 * '-')
 '---------------------------------------------'
 '---------------------------------------------'
 '---------------------------------------------'
+# def count_tags(filename: str) -> dict:
+#
+#     res = {}
+#     tree = ET.parse(filename)
+#     root = tree.getroot()
+#
+#     for child in root.iter():
+#         res.setdefault(child.tag, 0)
+#         res[child.tag] += 1
+#
+#     return res
+#
+# print(count_tags('files/xml/test_1.xml'))
+'---------------------------------------------'
+# def get_active_courses(filename: str) -> None:
+#
+#     tree = ET.parse(filename)
+#     root = tree.getroot()
+#
+#     for course in root.iter('course'):
+#         if course.attrib['active'].lower() == 'true':
+#             print(f'{course.findall('title')[0].text} — {course.findall('duration')[0].text}')
+#
+# get_active_courses('files/xml/courses_2.xml')
+'---------------------------------------------'
+# def get_child_tags(filename: str, parent_tag: str) -> list:
+#
+#     res = []
+#
+#     tree = ET.parse(filename)
+#     root = tree.getroot()
+#
+#     for child in root.findall(parent_tag):
+#         for t in child:
+#             res.append(t.tag)
+#     return res
+#
+# print(get_child_tags('files/xml/shops.xml', 'product'))
+'---------------------------------------------'
+# def get_child_tags(filename: str) -> list:
+#
+#     res= []
+#
+#     tree = ET.parse(filename)
+#     root = tree.getroot()
+#
+#     for child in root:
+#         res.append(child.tag)
+#
+#     return res
+#
+# print(get_child_tags('files/xml/products.xml'))
+'---------------------------------------------'
+# def get_root_tag(filename: str) -> str:
+#
+#     tree = ET.parse(filename)
+#     root = tree.getroot()
+#
+#     return root.tag
+#
+# print(get_root_tag('files/xml/courses.xml'))
 '---------------------------------------------'
 # # Код с рекуцрчсией, охуенный. Для любой степени ыложенности
 # def rec_dict(item, file, otstup = 4):

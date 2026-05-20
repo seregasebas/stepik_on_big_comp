@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<shop>
+<product>
+    <name>Чай</name>
+    <price>120</price>
+</product>
+<product>
+    <name>Кофе</name>
+    <price>250</price>
+</product>
+</shop>

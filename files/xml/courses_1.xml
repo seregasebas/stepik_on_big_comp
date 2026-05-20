@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<courses>
+<category name="Python">
+    <level value="beginner">
+        <course active="true">
+            <title>Python с нуля</title>
+            <duration>40</duration>
+            <rating>4.8</rating>
+        </course>
+        <course active="FALSE">
+            <title>Основы алгоритмов</title>
+            <duration>30</duration>
+            <rating>4.5</rating>
+        </course>
+    </level>
+    <level value="advanced">
+        <course active="true">
+            <title>Python и Django</title>
+            <duration>50</duration>
+            <rating>4.9</rating>
+        </course>
+    </level>
+</category>
+
+<category name="Web">
+    <level value="beginner">
+        <course active="true">
+            <title>HTML и CSS</title>
+            <duration>25</duration>
+            <rating>4.6</rating>
+        </course>
+    </level>
+</category>
+</courses>
