@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<bookings>
+    <booking>
+        <hotel>Grand Hotel</hotel>
+        <nights>3</nights>
+        <price>120</price>
+    </booking>
+    <booking>
+        <hotel>City Inn</hotel>
+        <nights>2</nights>
+        <price>80</price>
+    </booking>
+    <booking>
+        <hotel>Grand Hotel</hotel>
+        <nights>1</nights>
+        <price>120</price>
+    </booking>
+</bookings>

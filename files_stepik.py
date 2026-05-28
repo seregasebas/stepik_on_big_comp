@@ -14,6 +14,74 @@ print(25 * '-')
 '---------------------------------------------'
 '---------------------------------------------'
 '---------------------------------------------'
+'---------------------------------------------'
+'---------------------------------------------'
+'---------------------------------------------'
+'---------------------------------------------'
+'---------------------------------------------'
+# def get_heaviest_route(filename):
+#
+#     res = {}
+#
+#     # Парсим xml файл
+#     tree = ET.parse(filename)
+#     root = tree.getroot()
+#
+#     for route in root.findall('route'):
+#         key = route.find('from').text + route.find('to').text
+#         res.setdefault(key, [route.find('from').text, route.find('to').text, 0])
+#         res[key][2] += int(route.find('weight').text)
+#
+#     max_weight = 0
+#     res_max = []
+#     for key, value in res.items():
+#         if value[2] > max_weight:
+#             res_max = value
+#             max_weight = value[2]
+#
+#     return tuple(res_max)
+#
+# print(get_heaviest_route('files/xml/routes_1.xml'))
+'---------------------------------------------'
+# def calculate_revenue(filename: str) -> dict:
+#
+#     res = {}
+#
+#     # Парсим xml файл
+#     tree = ET.parse(filename)
+#     root = tree.getroot()
+#
+#     for booking in root.findall('booking'):
+#         cost = int(booking.find('nights').text) * int(booking.find('price').text)
+#         res.setdefault(booking.find('hotel').text, 0)
+#         res[booking.find('hotel').text] += int(cost)
+#
+#     return res
+#
+# print(calculate_revenue('files/xml/bookings_1.xml'))
+'---------------------------------------------'
+# def print_courses_by_level(filename):
+#     # Парсим XML-файл
+#     tree = ET.parse(filename)
+#     root = tree.getroot()
+#
+#     # Проходим по всем категориям
+#     for category in root.findall('category'):
+#         category_name = category.get('name')
+#         print(f"Категория: {category_name}")
+#
+#         # Проходим по всем уровням внутри категории
+#         for level in category.findall('level'):
+#             level_value = level.get('value')
+#             print(f"  Уровень: {level_value}")
+#
+#             # Проходим по всем курсам внутри уровня
+#             for course in level.findall('course'):
+#                 title = course.find('title').text
+#                 print(f"    - {title}")
+#
+# print_courses_by_level('files/xml/courses_2.xml')
+'---------------------------------------------'
 # def count_tags(filename: str) -> dict:
 #
 #     res = {}

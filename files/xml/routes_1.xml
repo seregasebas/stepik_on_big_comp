@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<logistics>
+    <route>
+        <from>Berlin</from>
+        <to>Paris</to>
+        <weight>1200</weight>
+    </route>
+    <route>
+        <from>Berlin</from>
+        <to>Paris</to>
+        <weight>800</weight>
+    </route>
+    <route>
+        <from>Madrid</from>
+        <to>Rome</to>
+        <weight>1500</weight>
+    </route>
+</logistics>

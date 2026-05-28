@@ -1,17 +1,14 @@
 <?xml version="1.0"?>
 <courses>
- <category name="Data">
-     <level value="beginner">
-         <course active="TRUE">
-             <title>SQL с нуля</title>
-             <duration>20</duration>
-             <rating>4.4</rating>
-         </course>
-         <course active="false">
-             <title>Excel для аналитика</title>
-             <duration>15</duration>
-             <rating>4.3</rating>
-         </course>
-     </level>
- </category>
+    <category name="Design">
+        <level value="beginner">
+            <course><title>Основы типографики</title></course>
+            <course><title>Цвет и композиция</title></course>
+            <course><title>UX для новичков</title></course>
+        </level>
+        <level value="advanced">
+            <course><title>Дизайн-системы</title></course>
+            <course><title>Исследования пользователей</title></course>
+        </level>
+    </category>
 </courses>
