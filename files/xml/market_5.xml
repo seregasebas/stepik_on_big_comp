@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<marketplace>
+    <seller id="prime">
+        <product sku="p1">
+            <reviews>
+                <review rating="5"><text>🔥</text></review>
+                <review rating="5"><text>🔥</text></review>
+                <review rating="5"><text>🔥</text></review>
+                <review rating="4"><text>ok</text></review>
+                <review rating="5"><text>nice</text></review>
+            </reviews>
+        </product>
+        <product sku="p2">
+            <reviews>
+                <review rating="5"><text>+</text></review>
+                <review rating="5"><text>+</text></review>
+                <review rating="4"><text>+</text></review>
+                <review rating="5"><text>+</text></review>
+                <review rating="5"><text>+</text></review>
+            </reviews>
+        </product>
+        <product sku="p3">
+            <reviews>
+                <review rating="5"><text>cool</text></review>
+                <review rating="4"><text>fine</text></review>
+                <review rating="5"><text>cool</text></review>
+                <review rating="5"><text>cool</text></review>
+            </reviews>
+        </product>
+    </seller>
+
+    <seller id="steady">
+        <product sku="s1">
+            <reviews>
+                <review rating="4"><text>a</text></review>
+                <review rating="4"><text>b</text></review>
+                <review rating="5"><text>c</text></review>
+                <review rating="4"><text>d</text></review>
+                <review rating="5"><text>e</text></review>
+            </reviews>
+        </product>
+        <product sku="s2">
+            <reviews>
+                <review rating="4"><text>f</text></review>
+                <review rating="4"><text>g</text></review>
+                <review rating="4"><text>h</text></review>
+                <review rating="5"><text>i</text></review>
+                <review rating="4"><text>j</text></review>
+            </reviews>
+        </product>
+    </seller>
+
+    <seller id="rookie">
+        <product sku="r1">
+            <reviews>
+                <review rating="5"><text>x</text></review>
+                <review rating="5"><text>x</text></review>
+                <review rating="5"><text>x</text></review>
+                <review rating="5"><text>x</text></review>
+                <review rating="5"><text>x</text></review>
+                <review rating="5"><text>x</text></review>
+                <review rating="5"><text>x</text></review>
+                <review rating="5"><text>x</text></review>
+                <review rating="5"><text>x</text></review>
+            </reviews>
+        </product>
+    </seller>
+
+    <seller id="elite">
+        <product sku="e1">
+            <reviews>
+                <review rating="5"><text>1</text></review>
+                <review rating="5"><text>2</text></review>
+                <review rating="5"><text>3</text></review>
+                <review rating="5"><text>4</text></review>
+                <review rating="5"><text>5</text></review>
+            </reviews>
+        </product>
+        <product sku="e2">
+            <reviews>
+                <review rating="5"><text>6</text></review>
+                <review rating="5"><text>7</text></review>
+                <review rating="5"><text>8</text></review>
+                <review rating="4"><text>9</text></review>
+                <review rating="5"><text>10</text></review>
+            </reviews>
+        </product>
+    </seller>
+</marketplace>

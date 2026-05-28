@@ -17,7 +17,55 @@ print(25 * '-')
 '---------------------------------------------'
 '---------------------------------------------'
 '---------------------------------------------'
+# def top_sellers(filename: str) -> list[tuple]:
+#     res = {}
+#     res_tuple = []
+#
+#     # Парсим xml файл
+#     tree = ET.parse(filename)
+#     root = tree.getroot()
+#
+#     # обходим seller
+#     for seller in root.findall('seller'):
+#         id_seller = seller.attrib['id']
+#
+#         #обходим продукт product
+#         for product in seller.findall('product'):
+#             sku_product = product.attrib['sku']
+#
+#             #обходим review берем из атрибута оценку и ведем подсчет количества ревьшек
+#             for reviews in product.findall('reviews'):
+#                 for review in reviews.findall('review'):
+#                     res.setdefault(id_seller, [0, []])
+#                     res[id_seller][0] += 1
+#                     res[id_seller][1].append(int(review.attrib['rating']))
+#
+#     for key, value in res.items():
+#         av_rating = sum(value[1]) / len(value[1])
+#         if value[0] >= 10 and av_rating >= 4.5:
+#             res_tuple.append((key, round(sum(value[1])/len(value[1]),2), value[0]))
+#
+#     return res_tuple
+#
+# print(top_sellers('files/xml/market_1.xml'))
 '---------------------------------------------'
+# def average_distance_by_city(filename: str) -> dict:
+#     res = {}
+#     # Парсим xml файл
+#     tree = ET.parse(filename)
+#     root = tree.getroot()
+#
+#     for trip in root.findall('trip'):
+#         key = trip.find('city').text
+#         res.setdefault(key, [])
+#         res[key].append(int(trip.find('distance').text))
+#
+#     for key, values in res.items():
+#         res[key] = sum(values) / len(values)
+#
+#     return res
+#
+# print(average_distance_by_city('files/xml/trips_1.xml'))
 '---------------------------------------------'
 # def get_heaviest_route(filename):
 #

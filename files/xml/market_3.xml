@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<marketplace>
+    <seller id="s1">
+        <product sku="p1">
+            <reviews>
+                <review rating="5"><text>A</text></review>
+                <review rating="5"><text>B</text></review>
+                <review rating="5"><text>C</text></review>
+                <review rating="5"><text>D</text></review>
+                <review rating="4"><text>E</text></review>
+            </reviews>
+        </product>
+        <product sku="p2">
+            <reviews>
+                <review rating="5"><text>F</text></review>
+                <review rating="5"><text>G</text></review>
+                <review rating="4"><text>H</text></review>
+                <review rating="5"><text>I</text></review>
+                <review rating="4"><text>J</text></review>
+            </reviews>
+        </product>
+    </seller>
+
+    <seller id="s2">
+        <product sku="x1">
+            <reviews>
+                <review rating="5"><text>1</text></review>
+                <review rating="5"><text>2</text></review>
+                <review rating="5"><text>3</text></review>
+                <review rating="5"><text>4</text></review>
+                <review rating="4"><text>5</text></review>
+            </reviews>
+        </product>
+        <product sku="x2">
+            <reviews>
+                <review rating="5"><text>6</text></review>
+                <review rating="5"><text>7</text></review>
+                <review rating="5"><text>8</text></review>
+                <review rating="5"><text>9</text></review>
+                <review rating="4"><text>10</text></review>
+            </reviews>
+        </product>
+    </seller>
+</marketplace>

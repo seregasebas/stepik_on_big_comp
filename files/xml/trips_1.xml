@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<trips>
+    <trip>
+        <city>Berlin</city>
+        <distance>12</distance>
+    </trip>
+    <trip>
+        <city>Berlin</city>
+        <distance>8</distance>
+    </trip>
+    <trip>
+        <city>Paris</city>
+        <distance>5</distance>
+    </trip>
+    <trip>
+        <city>Paris</city>
+        <distance>15</distance>
+    </trip>
+</trips>
