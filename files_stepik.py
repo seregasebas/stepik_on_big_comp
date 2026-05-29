@@ -1,20 +1,201 @@
-import csv
-import sys
-from typing import Any
+# import csv
+# import sys
+# from typing import Any
 # from string import punctuation
-import json
-import pickle
+# import json
+# import pickle
 import xml.etree.ElementTree as ET
 print('Hello, chuvak!')
 print(25 * '-')
 '---------------------------------------------'
+
 '---------------------------------------------'
+# def export_financial_report(filename: str, transactions: list[dict]) -> None:
+#     res = {}
+#
+#     for item in transactions:
+#         res.setdefault(item['client'], [{"amount": [], "currency":item['currency']}])
+#         res[item['client']][0]["amount"].append(item['amount'])
+#
+#     root = ET.Element('report')
+#
+#     for key, value in res.items():
+#         client = ET.SubElement(root, 'client')
+#         client.set('name', key)
+#
+#         for item in value:
+#             total = ET.SubElement(client, 'total')
+#             total.text = str(sum(item['amount']))
+#
+#             currency = ET.SubElement(client, 'currency')
+#             currency.text = item['currency']
+#
+#             trans_s = ET.SubElement(client, 'transactions')
+#             for amount in item['amount']:
+#                 transaction = ET.SubElement(trans_s, 'transaction')
+#                 transaction.text = str(amount)
+#
+#     tree = ET.ElementTree(root)
+#     ET.indent(tree)
+#     tree.write(filename, encoding='utf-8')
+#
+# transactions = [
+#     {"client": "Warren Buffett", "amount": 120, "currency": "USD"},
+#     {"client": "Warren Buffett", "amount": 80, "currency": "USD"},
+#     {"client": "Tony Stark", "amount": 200, "currency": "EUR"}
+# ]
+#
+# export_financial_report('files/xml/report1.xml', transactions)
+#
+# with open('files/xml/report1.xml', 'r', encoding='utf-8') as f:
+#     print(f.read())
 '---------------------------------------------'
+# def export_driver_ratings(filename: str, ratings: list[dict]) -> None:
+#     dict_norm = {}
+#
+#     for item in ratings:
+#         dict_norm.setdefault(item['driver'], [])
+#         dict_norm[item['driver']].append(item['rating'])
+#
+#     root = ET.Element('drivers')
+#
+#     for key, value in dict_norm.items():
+#         driver = ET.SubElement(root, 'driver')
+#         driver.set('name', key)
+#
+#         avg_rating = ET.SubElement(driver, 'avg_rating')
+#         avg_rating.text = str(round(sum(value) / len(value),1))
+#
+#         reviews = ET.SubElement(driver, 'reviews')
+#         reviews.text = str(len(value))
+#
+#     tree = ET.ElementTree(root)
+#     ET.indent(tree)
+#     tree.write(filename, encoding='utf-8')
+#
+# ratings = [
+#     {"driver": "Batman", "rating": 5},
+#     {"driver": "Batman", "rating": 4},
+#     {"driver": "Spider-Man", "rating": 3}
+# ]
+#
+# export_driver_ratings('files/xml/drivers1.xml', ratings)
+#
+# with open('files/xml/drivers1.xml', 'r', encoding='utf-8') as f:
+#     print(f.read())
 '---------------------------------------------'
+# def export_company_structure(filename: str, departments: dict) -> None:
+#     root = ET.Element('company')
+#
+#     for key, value in departments.items():
+#         department = ET.SubElement(root, 'department')
+#         department.set('name', key)
+#
+#         for item in value:
+#             employee = ET.SubElement(department, 'employee')
+#             employee.text = item
+#
+#     tree = ET.ElementTree(root)
+#     ET.indent(tree)
+#     tree.write(filename, encoding='utf-8')
+#
+# departments = {
+#     "IT": ["Anna", "Leo"],
+#     "HR": ["Maria"]
+# }
+#
+# export_company_structure('files/xml/company1.xml', departments)
+#
+# with open('files/xml/company1.xml', 'r', encoding='utf-8') as file:
+#     print(file.read())
 '---------------------------------------------'
+# def export_orders(filename, orders) -> None:
+#     root = ET.Element('orders')
+#
+#     for item in orders:
+#         order = ET.SubElement(root, 'order')
+#         order.set('id', str(item['id']))
+#
+#         amount = ET.SubElement(order, 'amount')
+#         amount.text = str(item['amount'])
+#
+#         currency = ET.SubElement(order, 'currency')
+#         currency.text = str(item['currency'])
+#
+#     tree = ET.ElementTree(root)
+#     ET.indent(tree)
+#     tree.write(filename, encoding='utf-8')
+#
+# orders = [
+#     {"id": 101, "amount": 250, "currency": "USD"},
+#     {"id": 102, "amount": 400, "currency": "EUR"}
+# ]
+#
+# export_orders('files/xml/orders.xml', orders)
+#
+# with open('files/xml/orders.xml', 'r', encoding='utf-8') as f:
+#     print(f.read())
 '---------------------------------------------'
+# def export_contacts(filename: str, contacts: list[dict]) -> None:
+#     root = ET.Element('contacts')
+#
+#     for item in contacts:
+#         contact = ET.SubElement(root, 'contact')
+#         for key, value in item.items():
+#             name = ET.SubElement(contact, key)
+#             name.text = value
+#
+#     tree = ET.ElementTree(root)
+#     ET.indent(tree)
+#     tree.write(filename, encoding='utf-8')
+#
+# contacts = [
+#     {"name": "Anna", "phone": "+374777777", "city": "Yerevan"},
+#     {"name": "Leo", "phone": "+374999999", "city": "Gyumri"}
+# ]
+#
+# export_contacts("files/xml/contacts1.xml", contacts)
+#
+# with open('files/xml/contacts1.xml', 'r', encoding='utf-8') as f:
+#     print(f.read())
 '---------------------------------------------'
-'---------------------------------------------'
+# def save_errors(filename: str, errors: list) -> None:
+#     #корневой тег
+#     root = ET.Element('errors')
+#
+#     for error_name in errors:
+#         error = ET.SubElement(root, 'error')
+#         error.text = error_name
+#
+#     tree = ET.ElementTree(root)
+#     ET.indent(tree)
+#     tree.write(filename, encoding='utf-8')
+#
+# errors = [
+#     "Ошибка доступа: /var/data",
+#     "Слишком длинный путь к файлу",
+#     "Кодировка не поддерживается: cp1251",
+#     "Database connection lost",
+#     "Invalid token",
+#     "Too many requests",
+#     "Cache miss"
+# ]
+#
+# save_errors('files/xml/errors2.xml', errors)
+#
+# with open('files/xml/errors2.xml', 'r', encoding='utf-8') as f:
+#     print(f.read())
+#
+# # errors = [
+# #     "File not found",
+# #     "Timeout error",
+# #     "Permission denied"
+# # ]
+# #
+# # save_errors('files/xml/errors1.xml', errors)
+# #
+# # with open('files/xml/errors1.xml', 'r', encoding='utf-8') as f:
+# #     print(f.read())
 '---------------------------------------------'
 # def average_fare_by_passenger_type(filename: str) -> dict:
 #     res = {}

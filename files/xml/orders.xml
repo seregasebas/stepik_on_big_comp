@@ -1,0 +1,10 @@
+<orders>
+  <order id="101">
+    <amount>250</amount>
+    <currency>USD</currency>
+  </order>
+  <order id="102">
+    <amount>400</amount>
+    <currency>EUR</currency>
+  </order>
+</orders>

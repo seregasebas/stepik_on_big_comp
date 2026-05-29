@@ -1,0 +1,9 @@
+<company>
+  <department name="IT">
+    <employee>Anna</employee>
+    <employee>Leo</employee>
+  </department>
+  <department name="HR">
+    <employee>Maria</employee>
+  </department>
+</company>

@@ -1,0 +1,5 @@
+<errors>
+  <error>File not found</error>
+  <error>Timeout error</error>
+  <error>Permission denied</error>
+</errors>

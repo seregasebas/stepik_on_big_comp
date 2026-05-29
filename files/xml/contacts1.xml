@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<contacts>
+  <contact>
+    <name>Anna</name>
+    <phone>+374777777</phone>
+    <city>Yerevan</city>
+  </contact>
+  <contact>
+    <name>Leo</name>
+    <phone>+374999999</phone>
+    <city>Gyumri</city>
+  </contact>
+</contacts>

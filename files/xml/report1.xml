@@ -1,0 +1,17 @@
+<report>
+  <client name="Warren Buffett">
+    <total>200</total>
+    <currency>USD</currency>
+    <transactions>
+      <transaction>120</transaction>
+      <transaction>80</transaction>
+    </transactions>
+  </client>
+  <client name="Tony Stark">
+    <total>200</total>
+    <currency>EUR</currency>
+    <transactions>
+      <transaction>200</transaction>
+    </transactions>
+  </client>
+</report>

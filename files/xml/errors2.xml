@@ -1,0 +1,9 @@
+<errors>
+  <error>Ошибка доступа: /var/data</error>
+  <error>Слишком длинный путь к файлу</error>
+  <error>Кодировка не поддерживается: cp1251</error>
+  <error>Database connection lost</error>
+  <error>Invalid token</error>
+  <error>Too many requests</error>
+  <error>Cache miss</error>
+</errors>
