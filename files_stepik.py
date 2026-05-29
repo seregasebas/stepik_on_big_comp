@@ -16,6 +16,31 @@ print(25 * '-')
 '---------------------------------------------'
 '---------------------------------------------'
 '---------------------------------------------'
+# def average_fare_by_passenger_type(filename: str) -> dict:
+#     res = {}
+#     # Парсим xml файл
+#     tree = ET.parse(filename)
+#     root = tree.getroot()
+#
+#     # проходим по номерам рейсов
+#     for flight in root.findall('flight'):
+#         # проходим по пассажирам:
+#         for passengers in flight.findall('passengers'):
+#             for passenger in passengers.findall('passenger'):
+#                 key = passenger.attrib['type']
+#                 for fare in passenger.findall('fare'):
+#                     for base in fare.findall('base'):
+#                         for tax in fare.findall('tax'):
+#                             cost = float(base.text) + float(tax.text)
+#                             res.setdefault(key, [])
+#                             res[key].append(cost)
+#
+#     for key, value in res.items():
+#         res[key] = round(sum(value) / len(value), 2)
+#
+#     return res
+#
+# print(average_fare_by_passenger_type('files/xml/flights_2.xml'))
 '---------------------------------------------'
 # def top_sellers(filename: str) -> list[tuple]:
 #     res = {}

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<itinerary>
+    <flight number="SU100">
+        <segments>
+            <segment><from>BER</from><to>PAR</to></segment>
+        </segments>
+        <passengers>
+            <passenger type="ADT">
+                <fare><base>300</base><tax>50</tax></fare>
+            </passenger>
+            <passenger type="ADT">
+                <fare><base>400</base><tax>51</tax></fare>
+            </passenger>
+            <passenger type="CHD">
+                <fare><base>200</base><tax>20</tax></fare>
+            </passenger>
+        </passengers>
+    </flight>
+</itinerary>

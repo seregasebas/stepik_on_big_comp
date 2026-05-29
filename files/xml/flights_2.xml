@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<itinerary>
+    <flight number="AF101">
+        <segments>
+            <segment><from>PAR</from><to>ROM</to></segment>
+        </segments>
+        <passengers>
+            <passenger type="ADT"><fare><base>100</base><tax>10</tax></fare></passenger>
+            <passenger type="CHD"><fare><base>80</base><tax>5</tax></fare></passenger>
+            <passenger type="ADT"><fare><base>120</base><tax>30</tax></fare></passenger>
+        </passengers>
+    </flight>
+
+    <flight number="AF102">
+        <segments>
+            <segment><from>ROM</from><to>ATH</to></segment>
+        </segments>
+        <passengers>
+            <passenger type="ADT"><fare><base>200</base><tax>40</tax></fare></passenger>
+            <passenger type="CHD"><fare><base>90</base><tax>5</tax></fare></passenger>
+        </passengers>
+    </flight>
+</itinerary>
