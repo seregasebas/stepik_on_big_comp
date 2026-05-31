@@ -4,11 +4,138 @@
 # from string import punctuation
 # import json
 # import pickle
-import xml.etree.ElementTree as ET
-print('Hello, chuvak!')
-print(25 * '-')
-'---------------------------------------------'
-
+# import xml.etree.ElementTree as ET
+# print('Hello, chuvak!')
+# print(25 * '-')
+# '---------------------------------------------'
+# '---------------------------------------------'
+# '---------------------------------------------'
+# def recursion(element, root):
+#     if isinstance(element, dict):
+#         for key, value in element.items():
+#             if isinstance(value, dict):
+#                 tag = ET.SubElement(root, key)
+#                 recursion(value, tag)
+#             elif isinstance(value, list):
+#                 tag = ET.SubElement(root, key)
+#                 for el in value:
+#                     if isinstance(el, str):
+#                         tag1 = ET.SubElement(tag, key[:-1])
+#                         tag1.text = str(el)
+#                     else:
+#                         tag1 = ET.SubElement(tag, key[:-1])
+#                         recursion(el, tag1)
+#             else:
+#                 tag = ET.SubElement(root, key)
+#                 tag.text = str(value)
+#     elif isinstance(element, list):
+#         for el in element:
+#             tag = ET.SubElement(root, root.tag[:-1])
+#             recursion(el, tag)
+#
+# def save_to_xml(data: dict, filename: str) -> None:
+#
+#     for key, value in data.items():
+#         root = ET.Element(key)
+#         recursion(value, root)
+#
+#         tree = ET.ElementTree(root)
+#         ET.indent(tree)
+#         tree.write(filename, encoding = 'utf-8')
+#
+# # data = {
+# #     "user": {
+# #         "name": "Anna",
+# #         "age": 25,
+# #         "active": True
+# #     }
+# # }
+#
+# # data = {
+# #     "users": [
+# #         {"name": "Neo", "role": "Chosen One"},
+# #         {"name": "Trinity", "role": "Hacker"},
+# #         {"name": "Morpheus", "role": "Captain"}
+# #     ]
+# # }
+#
+# # data = {
+# #     "order": {
+# #         "id": 501,
+# #         "customer": {
+# #             "name": "Bruce Wayne",
+# #             "city": "Gotham"
+# #         },
+# #         "total": 999.99
+# #     }
+# # }
+#
+# # data = {
+# #     "itinerary": {
+# #         "flights": [
+# #             {
+# #                 "number": "SU100",
+# #                 "segments": [
+# #                     {"from": "BER", "to": "PAR"},
+# #                     {"from": "PAR", "to": "ROM"}
+# #                 ],
+# #                 "passengers": [
+# #                     {"type": "ADT", "fare": {"base": 300, "tax": 50}},
+# #                     {"type": "CHD", "fare": {"base": 200, "tax": 20}}
+# #                 ]
+# #             }
+# #         ]
+# #     }
+# # }
+#
+# data = {
+#     "party": {
+#         "name": "Debuggers Anonymous",
+#         "location": {
+#             "city": "Byteville",
+#             "venue": "Stack Trace Hall",
+#             "note": "Bring snacks & patience"
+#         },
+#         "guests": [
+#             {
+#                 "nickname": "Captain Obvious",
+#                 "role": "QA Hero",
+#                 "stats": {"bugs_found": 42, "coffee_cups": 7}
+#             },
+#             {
+#                 "nickname": "Null Pointer",
+#                 "role": "Backend Wizard",
+#                 "stats": {"bugs_found": 13, "coffee_cups": 999}
+#             },
+#             {
+#                 "nickname": "Sir Segfault",
+#                 "role": "C++ Sorcerer",
+#                 "stats": {"bugs_found": 7, "coffee_cups": 3}
+#             },
+#             {
+#                 "nickname": "Lady Regex",
+#                 "role": "Pattern Summoner",
+#                 "stats": {"bugs_found": 21, "coffee_cups": 5}
+#             }
+#         ],
+#         "playlist": [
+#             "Never Gonna Give You Up",
+#             "404 Not Found (Remix)",
+#             "Oops... I Did It Again",
+#             "Under Pressure (CPU Edition)"
+#         ],
+#         "rules": {
+#             "rule1": "No tabs, only spaces",
+#             "rule2": "If it works, don't touch it",
+#             "rule3": "Blame the cache (always)"
+#         }
+#     }
+# }
+#
+# save_to_xml(data, 'files/xml/final.xml')
+#
+# with open('files/xml/final.xml', 'r', encoding='utf-8') as f:
+#     print(f.read())
 '---------------------------------------------'
 # def export_financial_report(filename: str, transactions: list[dict]) -> None:
 #     res = {}

@@ -1,0 +1,53 @@
+<party>
+  <name>Debuggers Anonymous</name>
+  <location>
+    <city>Byteville</city>
+    <venue>Stack Trace Hall</venue>
+    <note>Bring snacks &amp; patience</note>
+  </location>
+  <guests>
+    <guest>
+      <nickname>Captain Obvious</nickname>
+      <role>QA Hero</role>
+      <stats>
+        <bugs_found>42</bugs_found>
+        <coffee_cups>7</coffee_cups>
+      </stats>
+    </guest>
+    <guest>
+      <nickname>Null Pointer</nickname>
+      <role>Backend Wizard</role>
+      <stats>
+        <bugs_found>13</bugs_found>
+        <coffee_cups>999</coffee_cups>
+      </stats>
+    </guest>
+    <guest>
+      <nickname>Sir Segfault</nickname>
+      <role>C++ Sorcerer</role>
+      <stats>
+        <bugs_found>7</bugs_found>
+        <coffee_cups>3</coffee_cups>
+      </stats>
+    </guest>
+    <guest>
+      <nickname>Lady Regex</nickname>
+      <role>Pattern Summoner</role>
+      <stats>
+        <bugs_found>21</bugs_found>
+        <coffee_cups>5</coffee_cups>
+      </stats>
+    </guest>
+  </guests>
+  <playlist>
+    <playlis>Never Gonna Give You Up</playlis>
+    <playlis>404 Not Found (Remix)</playlis>
+    <playlis>Oops... I Did It Again</playlis>
+    <playlis>Under Pressure (CPU Edition)</playlis>
+  </playlist>
+  <rules>
+    <rule1>No tabs, only spaces</rule1>
+    <rule2>If it works, don't touch it</rule2>
+    <rule3>Blame the cache (always)</rule3>
+  </rules>
+</party>
